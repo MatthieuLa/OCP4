@@ -1,0 +1,11 @@
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  display: inline;
+  p {
+    display: inline;
+  }
+}
