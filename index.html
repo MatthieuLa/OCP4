@@ -12,6 +12,13 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./dist/css/main.css" />
+    <link rel="stylesheet" href="./dist/css/utility.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Header -->
@@ -20,34 +27,38 @@
       <img
         src="./assets/logo/ohmyfood@2x.svg"
         alt="Logo de l'enseigne ohmyfood"
+        class="header__logo"
       />
-      <div class="header-container">
+      <div class="header__container">
         <i class="fa-solid fa-location-dot"></i>
-        <p>Paris, Belleville</p>
+        <input type="text" placeholder="Paris, Belleville" />
       </div>
     </header>
     <main>
       <!-- First block -->
 
       <section class="first-block">
-        <h1>Réserver le menu qui vous convient</h1>
+        <h1>Réserver le menu qui vous&nbsp;convient</h1>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-        <button>Explorer nos restaurants</button>
+        <button class="btn--purple">Explorer nos restaurants</button>
       </section>
 
       <!-- Second block -->
 
       <section class="second-block">
-        <div class="second-block-wrapper">
+        <div class="second-block__wrapper">
           <h2>Fonctionnement</h2>
-
           <button>
-            <i class="fa-solid fa-mobile-screen-button"></i>Choisissez un
-            restaurant
+            <span class="second-block__elipse one">1</span>
+            <i class="fa-solid fa-mobile-screen-button btn-scdwrap"></i
+            >Choisissez un restaurant
           </button>
-          <button><i class="fa-solid fa-list-ul"></i>Composez votre menu</button
+          <button>
+            <span class="second-block__elipse two">2</span>
+            <i class="fa-solid fa-list-ul btn-scdwrap"></i>Composez votre menu</button
           ><button>
-            <i class="fa-solid fa-store"></i>Dégustez au restaurant
+            <span class="second-block__elipse three">3</span>
+            <i class="fa-solid fa-store btn-scdwrap"></i>Dégustez au restaurant
           </button>
         </div>
       </section>
@@ -57,39 +68,92 @@
       <section class="third-block">
         <div class="third-block-wrapper">
           <h2>Restaurants</h2>
-          <img
-            src="./assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-            alt="Des plats sur une table de restaurant"
-          /><img
-            src="./assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-            alt="Des plats sur une table de restaurant"
-          /><img
-            src="./assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-            alt="Des plats sur une table de restaurant"
-          /><img
-            src="./assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-            alt="Des plats sur une table de restaurant"
-          />
+          <div class="third-block__cards-wrapper">
+            <div class="third-block__card">
+              <img
+                src="./assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="Des plats sur une table de restaurant"
+              />
+              <div class="third-block__text">
+                <p class="third-block__text--new one">Nouveau</p>
+                <h3>La palette du goût</h3>
+                <p>Ménilmontant</p>
+              </div>
+              <img
+                src="./assets/heart.svg"
+                alt=""
+                class="third-block__heart one"
+              />
+            </div>
+            <div class="third-block__card">
+              <img
+                src="./assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                alt="Des plats sur une table de restaurant"
+              />
+              <div class="third-block__text">
+                <p class="third-block__text--new two">Nouveau</p>
+                <h3>La note enchantée</h3>
+                <p>Charonne</p>
+              </div>
+              <img
+                src="./assets/heart.svg"
+                alt=""
+                class="third-block__heart two"
+              />
+            </div>
+            <div class="third-block__card">
+              <img
+                src="./assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                alt="Des plats sur une table de restaurant"
+              />
+              <div class="third-block__text">
+                <h3>À la française</h3>
+                <p>Cité Rouge</p>
+              </div>
+              <img
+                src="./assets/heart.svg"
+                alt=""
+                class="third-block__heart three"
+              />
+            </div>
+            <div class="third-block__card">
+              <img
+                src="./assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                alt="Des plats sur une table de restaurant"
+              />
+              <div class="third-block__text">
+                <h3>Le délice des sens</h3>
+                <p>Folie-Méricourt</p>
+              </div>
+              <img
+                src="./assets/heart.svg"
+                alt=""
+                class="third-block__heart four"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
 
-    <footer>
-      <img src="./assets/logo/ohmyfood@2x.svg" alt="" />
-      <ul>
-        <li>
-          <i class="fa-solid fa-utensils"></i
-          ><a href="#">Proposer un restaurant</a>
-        </li>
-        <li>
-          <i class="fa-solid fa-handshake-angle"></i
-          ><a href="#">Devenir partenaire</a>
-        </li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+    <footer class="footer-block">
+      <img src="./assets/logo/ohmyfood@2x.svg" alt="" class="footer__logo" />
+      <div class="footer-block__list">
+        <ul>
+          <li>
+            <i class="fa-solid fa-utensils"></i
+            ><a href="#">Proposer un restaurant</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-handshake-angle"></i
+            ><a href="#">Devenir partenaire</a>
+          </li>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>

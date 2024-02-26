@@ -1,11 +1,184 @@
+@import "utility";
+
+// * {
+//   border: 1px solid red;
+// }
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 header {
   display: flex;
   flex-direction: column;
 }
 
-.header-container {
-  display: inline;
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input {
+  padding: 1em;
+  border: none;
+  background-color: $bg--third--color;
+  color: #000;
+  text-align: center;
+  margin-left: 0;
+  width: 25%;
+}
+
+// Header
+
+// Mixin pour le logo ? Il se retrouve en top de toute les pages.
+.header__logo {
+  width: 200px;
+  height: 100%;
+  margin: 1em auto;
+}
+
+.header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: #eaeaea;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  i {
+    position: absolute;
+    left: 110px;
+  }
+}
+
+//  First block
+
+.first-block {
+  background-color: $bg--primary--color;
+  h1 {
+    text-align: center;
+    margin-top: 1.5em;
+    width: 100%;
+  }
+
   p {
-    display: inline;
+    text-align: center;
+    margin: auto 1em;
+    font-weight: 300;
+  }
+}
+
+//  Second block
+
+.second-block__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 2em 0;
+  padding: 1em;
+  background-color: $bg--secondary--color;
+  margin-bottom: 3em;
+
+  button {
+    display: flex;
+    border: none;
+    text-align: center;
+    padding: 1.6em;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    width: 335px;
+    margin-left: 1em;
+    gap: 2em;
+    font-weight: 600;
+  }
+
+  .btn-scdwrap {
+    color: $icon--color;
+    margin-left: 1em;
+  }
+
+  .second-block__elipse.one {
+    top: 475px;
+  }
+
+  .second-block__elipse.two {
+    top: 550px;
+  }
+
+  .second-block__elipse.three {
+    top: 625px;
+  }
+}
+
+// Third block
+
+.third-block {
+  background-color: $bg--primary--color;
+  margin: 2em 0;
+  padding: 1em;
+  margin-bottom: 3em;
+
+  .third-block__cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4em;
+  }
+
+  .third-block__card {
+    background-color: $bg--primary--color;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
+    img {
+      height: 200px;
+      width: 100%;
+      border-radius: 20px 20px 0 0;
+    }
+    .third-block__text {
+      margin-left: 1em;
+      line-height: 0.2em;
+      padding: 0.5em;
+      p {
+        font-weight: 300;
+      }
+    }
+  }
+
+  .third-block__heart.one {
+    position: absolute;
+    width: 22px;
+    height: 21px;
+    right: 40px;
+    top: 1040px;
+    border-radius: 0;
+  }
+
+  .third-block__heart.two {
+    position: absolute;
+    width: 22px;
+    height: 21px;
+    right: 40px;
+    top: 1343px;
+    border-radius: 0;
+  }
+
+  .third-block__heart.three {
+    position: absolute;
+    width: 22px;
+    height: 21px;
+    right: 40px;
+    top: 1644px;
+    border-radius: 0;
+  }
+
+  .third-block__heart.four {
+    position: absolute;
+    width: 22px;
+    height: 21px;
+    right: 40px;
+    top: 1945px;
+    border-radius: 0;
   }
 }

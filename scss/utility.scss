@@ -1,0 +1,107 @@
+// Couleurs
+
+$icon--color: #7e7e7e;
+$bg--primary--color: #f6f6f6;
+$bg--secondary--color: #fff;
+$bg--third--color: #eaeaea;
+$bg--footer--color: #353535;
+$primary--color: #9356dc;
+$secondary--color: #99e2d0;
+
+// Bouton
+
+.btn--purple {
+  background: rgb(147, 86, 220);
+  background: linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 1) 59%,
+    rgba(255, 121, 218, 1) 100%
+  );
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 1em;
+  border-radius: 20px;
+  margin: 1em 7em;
+  width: 51%;
+}
+
+//Elipse - les boutons doivent être régler un peu plus en hauteur, mais si je règle le top manuellement, ça déplace deux boutons sur trois hors champs, à voir si je dois faire une classe spécifique pour les trois.
+
+.second-block__elipse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary--color;
+  color: $bg--secondary--color;
+  width: 24px;
+  height: 24px;
+  border-radius: 20px;
+  position: absolute;
+  left: 20px;
+}
+
+// Third block texte new
+
+.third-block__text--new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary--color;
+  width: 80px;
+  height: 29px;
+  color: rgba($color: #000000, $alpha: 0.6);
+  border-radius: 3px;
+}
+
+.third-block__text--new,
+.one {
+  position: absolute;
+  right: 30px;
+  top: 811px;
+}
+
+.two {
+  position: absolute;
+  right: 30px;
+  top: 1110px;
+}
+
+// Footer
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: $bg--footer--color;
+  color: $bg--secondary--color;
+  padding: 2em;
+  font-size: 0.9em;
+  margin-bottom: 0;
+  line-height: 1.7em;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+    margin-left: -2.7em;
+  }
+
+  .footer__logo {
+    filter: invert(1); // Inversion du logo pour le footer
+    width: 100px;
+  }
+
+  .footer-block__list {
+    width: 100%;
+  }
+
+  .footer-block__list li {
+    display: flex;
+    gap: 0.6em;
+  }
+}
