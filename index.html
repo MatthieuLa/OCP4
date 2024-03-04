@@ -24,11 +24,13 @@
     <!-- Header -->
 
     <header>
-      <img
-        src="./assets/logo/ohmyfood@2x.svg"
-        alt="Logo de l'enseigne ohmyfood"
-        class="header__logo"
-      />
+      <div class="header__logo">
+        <img
+          src="./assets/logo/ohmyfood@2x.svg"
+          alt="Logo de l'enseigne ohmyfood"
+          class="header__logo--img"
+        />
+      </div>
       <div class="header__container">
         <i class="fa-solid fa-location-dot"></i>
         <input type="text" placeholder="Paris, Belleville" />
@@ -49,15 +51,15 @@
         <div class="second-block__wrapper">
           <h2>Fonctionnement</h2>
           <button>
-            <span class="second-block__elipse one">1</span>
+            <span class="second-block__elipse">1</span>
             <i class="fa-solid fa-mobile-screen-button btn-scdwrap"></i
             >Choisissez un restaurant
           </button>
           <button>
-            <span class="second-block__elipse two">2</span>
+            <span class="second-block__elipse">2</span>
             <i class="fa-solid fa-list-ul btn-scdwrap"></i>Composez votre menu</button
           ><button>
-            <span class="second-block__elipse three">3</span>
+            <span class="second-block__elipse">3</span>
             <i class="fa-solid fa-store btn-scdwrap"></i>Dégustez au restaurant
           </button>
         </div>
@@ -66,7 +68,7 @@
       <!-- Third block -->
 
       <section class="third-block">
-        <div class="third-block-wrapper">
+        <div class="third-block__wrapper">
           <h2>Restaurants</h2>
           <div class="third-block__cards-wrapper">
             <div class="third-block__card">

@@ -72,3 +72,53 @@
   .footer-block .footer-block__list li {
     display: flex;
     gap: 1em; }
+
+* {
+  box-sizing: border-box; }
+
+.main-block {
+  background-color: #eaeaea;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+  padding: 1em; }
+
+.header-restaurant {
+  font-family: Shrikhand, sans-serif; }
+
+.heart {
+  position: absolute;
+  width: 22px;
+  height: 21px;
+  right: 40px;
+  border-radius: 0; }
+
+.starters-block,
+.dishes-block,
+.desserts-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  gap: 1em; }
+
+.menu-block__button {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  color: #000;
+  border: none;
+  width: 100%;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.05); }
+  .menu-block__button .menu-block__button--txt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 0;
+    margin-top: 0; }
+    .menu-block__button .menu-block__button--txt span {
+      font-weight: bold; }

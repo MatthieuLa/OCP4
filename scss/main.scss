@@ -1,9 +1,5 @@
 @import "utility";
 
-// * {
-//   border: 1px solid red;
-// }
-
 img {
   width: 100%;
   height: auto;
@@ -26,14 +22,18 @@ input {
   background-color: $bg--third--color;
   color: #000;
   text-align: center;
-  margin-left: 0;
-  width: 25%;
 }
 
 // Header
 
 // Mixin pour le logo ? Il se retrouve en top de toute les pages.
 .header__logo {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+.header__logo--img {
+  display: flex;
   width: 200px;
   height: 100%;
   margin: 1em auto;
@@ -43,13 +43,11 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1em;
   background-color: #eaeaea;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   i {
-    position: absolute;
-    left: 110px;
+    position: sticky;
   }
 }
 
@@ -57,9 +55,9 @@ input {
 
 .first-block {
   background-color: $bg--primary--color;
+  padding: 2em;
   h1 {
     text-align: center;
-    margin-top: 1.5em;
     width: 100%;
   }
 
@@ -88,8 +86,8 @@ input {
     padding: 1.6em;
     border-radius: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-    width: 335px;
-    margin-left: 1em;
+    width: 92%;
+    margin: auto;
     gap: 2em;
     font-weight: 600;
   }
@@ -97,18 +95,6 @@ input {
   .btn-scdwrap {
     color: $icon--color;
     margin-left: 1em;
-  }
-
-  .second-block__elipse.one {
-    top: 475px;
-  }
-
-  .second-block__elipse.two {
-    top: 550px;
-  }
-
-  .second-block__elipse.three {
-    top: 625px;
   }
 }
 
@@ -151,7 +137,7 @@ input {
     width: 22px;
     height: 21px;
     right: 40px;
-    top: 1040px;
+    top: 1140px;
     border-radius: 0;
   }
 
@@ -160,7 +146,7 @@ input {
     width: 22px;
     height: 21px;
     right: 40px;
-    top: 1343px;
+    top: 1443px;
     border-radius: 0;
   }
 
@@ -169,7 +155,7 @@ input {
     width: 22px;
     height: 21px;
     right: 40px;
-    top: 1644px;
+    top: 1744px;
     border-radius: 0;
   }
 
@@ -178,7 +164,7 @@ input {
     width: 22px;
     height: 21px;
     right: 40px;
-    top: 1945px;
+    top: 2045px;
     border-radius: 0;
   }
 }

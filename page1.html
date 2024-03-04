@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ohmyfood</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./dist/css/main.css" />
+    <link rel="stylesheet" href="./dist/css/utility.css" />
+    <link rel="stylesheet" href="./dist/css/restaurant.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header>
+      <div class="header__logo">
+        <img
+          src="./assets/logo/ohmyfood@2x.svg"
+          alt="Logo de l'enseigne ohmyfood"
+          class="header__logo--img"
+        />
+      </div>
+    </header>
+    <main>
+      <!-- Image -->
+      <section class="image-block">
+        <img
+          src="./assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+          alt="Des plats sur une table de restaurant"
+        />
+      </section>
+      <!-- First block restaurant -->
+      <section class="main-block">
+        <div class="first-block__wrapper">
+          <h1 class="header-restaurant">La palette du goût</h1>
+          <img src="./assets/heart.svg" alt="" class="heart" />
+
+          <!-- Starters -->
+
+          <h2>ENTREES</h2>
+          <div class="starters-block">
+            <div class="menu-block__button">
+              <h3>Fricassée d'escargots</h3>
+              <p class="menu-block__button--txt">
+                Au piment d'Espelette<span>25€</span>
+              </p>
+            </div>
+            <div class="menu-block__button">
+              <h3>Foie gras de canard mi-cuit</h3>
+              <p class="menu-block__button--txt">
+                Et ses copeaux de truffe noire <span>35€</span>
+              </p>
+            </div>
+            <div class="menu-block__button">
+              <h3>Oeuf au plat</h3>
+              <p class="menu-block__button--txt">
+                Assaisonné à la truffe sur lit de caviar<span>20€</span>
+              </p>
+            </div>
+
+            <!-- Dishes -->
+
+            <h2>PLATS</h2>
+            <div class="dishes-block">
+              <div class="menu-block__button">
+                <h3>Filet de boeuf aux herbes</h3>
+                <p class="menu-block__button--txt">
+                  Accompagné de sa ribambelle de légumes<span>40€</span>
+                </p>
+              </div>
+              <div class="menu-block__button">
+                <h3>Parmentier de queue de boeuf</h3>
+                <p class="menu-block__button--txt">
+                  À la truffe noire sur sa purée de panais<span>35€</span>
+                </p>
+              </div>
+              <div class="menu-block__button">
+                <h3>Filet de turbot</h3>
+                <p class="menu-block__button--txt">
+                  Aux agrumes <span>44€</span>
+                </p>
+              </div>
+
+              <!-- Desserts -->
+
+              <h2>DESSERTS</h2>
+              <div class="desserts-block">
+                <div class="menu-block__button">
+                  <h3>Paris-Brest</h3>
+                  <p class="menu-block__button--txt">
+                    Revisité<span>18€</span>
+                  </p>
+                </div>
+                <div class="menu-block__button">
+                  <h3>Macaron au chocolat d'exception</h3>
+                  <p class="menu-block__button--txt">
+                    Et glace à la vanille de Madagascar
+                    <span>22€</span>
+                  </p>
+                </div>
+                <div class="menu-block__button">
+                  <h3>Mousse au chocolat</h3>
+                  <p class="menu-block__button--txt">
+                    Au piment d'Espelette et à la truffe noire
+                    <span>23€</span>
+                  </p>
+                </div>
+
+                <!-- Second block div -->
+
+                <button class="btn--purple">Commander</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer-block">
+      <img src="./assets/logo/ohmyfood@2x.svg" alt="" class="footer__logo" />
+      <div class="footer-block__list">
+        <ul>
+          <li>
+            <i class="fa-solid fa-utensils"></i
+            ><a href="#">Proposer un restaurant</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-handshake-angle"></i
+            ><a href="#">Devenir partenaire</a>
+          </li>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
