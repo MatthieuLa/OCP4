@@ -54,19 +54,30 @@ $secondary--color: #99e2d0;
   height: 29px;
   color: rgba($color: #000000, $alpha: 0.6);
   border-radius: 3px;
+  position: relative;
 }
 
-.third-block__text--new,
-.one {
+.third-block__text--new.one {
   position: absolute;
-  right: 30px;
-  top: 911px;
+  left: 73%;
+  bottom: 80%;
 }
 
-.two {
+.third-block__text--new.two {
   position: absolute;
-  right: 30px;
-  top: 1210px;
+  left: 73%;
+  bottom: 80%;
+}
+
+// Anchor style
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: $primary--color;
 }
 
 // Footer

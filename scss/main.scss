@@ -1,5 +1,9 @@
 @import "utility";
 
+// * {
+//   border: 1px red solid;
+// }
+
 img {
   width: 100%;
   height: auto;
@@ -22,6 +26,11 @@ input {
   background-color: $bg--third--color;
   color: #000;
   text-align: center;
+}
+
+input::placeholder {
+  color: #000;
+  font-weight: bold;
 }
 
 // Header
@@ -82,7 +91,6 @@ input {
   button {
     display: flex;
     border: none;
-    text-align: center;
     padding: 1.6em;
     border-radius: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
@@ -94,7 +102,8 @@ input {
 
   .btn-scdwrap {
     color: $icon--color;
-    margin-left: 1em;
+    font-size: 20px;
+    align-self: center;
   }
 }
 
@@ -116,6 +125,7 @@ input {
     background-color: $bg--primary--color;
     border-radius: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
 
     img {
       height: 200px;
@@ -125,7 +135,6 @@ input {
     .third-block__text {
       margin-left: 1em;
       line-height: 0.2em;
-      padding: 0.5em;
       p {
         font-weight: 300;
       }
@@ -133,38 +142,38 @@ input {
   }
 
   .third-block__heart.one {
-    position: absolute;
+    position: relative;
     width: 22px;
     height: 21px;
-    right: 40px;
-    top: 1140px;
+    left: 90%;
+    bottom: 50px;
     border-radius: 0;
   }
 
   .third-block__heart.two {
-    position: absolute;
+    position: relative;
     width: 22px;
     height: 21px;
-    right: 40px;
-    top: 1443px;
+    left: 90%;
+    bottom: 50px;
     border-radius: 0;
   }
 
   .third-block__heart.three {
-    position: absolute;
+    position: relative;
     width: 22px;
     height: 21px;
-    right: 40px;
-    top: 1744px;
+    left: 90%;
+    bottom: 50px;
     border-radius: 0;
   }
 
   .third-block__heart.four {
-    position: absolute;
+    position: relative;
     width: 22px;
     height: 21px;
-    right: 40px;
-    top: 2045px;
+    left: 90%;
+    bottom: 50px;
     border-radius: 0;
   }
 }

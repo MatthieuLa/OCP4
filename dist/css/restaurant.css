@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .btn--purple {
   background: #9356dc;
   background: linear-gradient(0deg, #9356dc 8%, #ff79da 100%);
@@ -31,18 +32,25 @@
   width: 80px;
   height: 29px;
   color: rgba(0, 0, 0, 0.6);
-  border-radius: 3px; }
+  border-radius: 3px;
+  position: relative; }
 
-.third-block__text--new,
-.one {
+.third-block__text--new.one {
   position: absolute;
-  right: 30px;
-  top: 911px; }
+  left: 73%;
+  bottom: 80%; }
 
-.two {
+.third-block__text--new.two {
   position: absolute;
-  right: 30px;
-  top: 1210px; }
+  left: 73%;
+  bottom: 80%; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+a:hover {
+  color: #9356dc; }
 
 .footer-block {
   display: flex;
@@ -73,23 +81,49 @@
     display: flex;
     gap: 1em; }
 
-* {
-  box-sizing: border-box; }
+.header-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 1.5em; }
+
+.image-block {
+  object-fit: cover;
+  z-index: 0;
+  position: relative; }
 
 .main-block {
   background-color: #eaeaea;
   height: 100%;
-  border-radius: 10px 10px 0 0;
-  padding: 1em; }
+  border-radius: 30px 30px 0 0;
+  padding: 1em;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  bottom: 30px; }
+  .main-block h2 {
+    position: relative;
+    display: inline-block; }
+  .main-block h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    /* Ajustez en fonction de l'espacement souhaité */
+    height: 4px;
+    /* Épaisseur de la barre */
+    width: 50%;
+    /* Ajustez pour contrôler la longueur de la barre */
+    background-color: #99e2d0; }
 
 .header-restaurant {
-  font-family: Shrikhand, sans-serif; }
+  font-family: Shrikhand, sans-serif;
+  font-size: 28px; }
 
 .heart {
   position: absolute;
   width: 22px;
-  height: 21px;
-  right: 40px;
+  left: 80%;
+  bottom: 95%;
   border-radius: 0; }
 
 .starters-block,
@@ -108,9 +142,8 @@
   background-color: #f6f6f6;
   color: #000;
   border: none;
-  width: 100%;
   padding: 0.5em 1em;
-  border-radius: 5px;
+  border-radius: 15px;
   font-size: 1em;
   cursor: pointer;
   box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.05); }

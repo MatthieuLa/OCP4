@@ -31,18 +31,25 @@
   width: 80px;
   height: 29px;
   color: rgba(0, 0, 0, 0.6);
-  border-radius: 3px; }
+  border-radius: 3px;
+  position: relative; }
 
-.third-block__text--new,
-.one {
+.third-block__text--new.one {
   position: absolute;
-  right: 30px;
-  top: 911px; }
+  left: 73%;
+  bottom: 80%; }
 
-.two {
+.third-block__text--new.two {
   position: absolute;
-  right: 30px;
-  top: 1210px; }
+  left: 73%;
+  bottom: 80%; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+a:hover {
+  color: #9356dc; }
 
 .footer-block {
   display: flex;
@@ -94,6 +101,10 @@ input {
   color: #000;
   text-align: center; }
 
+input::placeholder {
+  color: #000;
+  font-weight: bold; }
+
 .header__logo {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   z-index: 1; }
@@ -135,7 +146,6 @@ input {
   .second-block__wrapper button {
     display: flex;
     border: none;
-    text-align: center;
     padding: 1.6em;
     border-radius: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
@@ -145,7 +155,8 @@ input {
     font-weight: 600; }
   .second-block__wrapper .btn-scdwrap {
     color: #7e7e7e;
-    margin-left: 1em; }
+    font-size: 20px;
+    align-self: center; }
 
 .third-block {
   background-color: #f6f6f6;
@@ -159,42 +170,42 @@ input {
   .third-block .third-block__card {
     background-color: #f6f6f6;
     border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); }
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    position: relative; }
     .third-block .third-block__card img {
       height: 200px;
       width: 100%;
       border-radius: 20px 20px 0 0; }
     .third-block .third-block__card .third-block__text {
       margin-left: 1em;
-      line-height: 0.2em;
-      padding: 0.5em; }
+      line-height: 0.2em; }
       .third-block .third-block__card .third-block__text p {
         font-weight: 300; }
   .third-block .third-block__heart.one {
-    position: absolute;
+    position: relative;
     width: 22px;
     height: 21px;
-    right: 40px;
-    top: 1140px;
+    left: 90%;
+    bottom: 50px;
     border-radius: 0; }
   .third-block .third-block__heart.two {
-    position: absolute;
+    position: relative;
     width: 22px;
     height: 21px;
-    right: 40px;
-    top: 1443px;
+    left: 90%;
+    bottom: 50px;
     border-radius: 0; }
   .third-block .third-block__heart.three {
-    position: absolute;
+    position: relative;
     width: 22px;
     height: 21px;
-    right: 40px;
-    top: 1744px;
+    left: 90%;
+    bottom: 50px;
     border-radius: 0; }
   .third-block .third-block__heart.four {
-    position: absolute;
+    position: relative;
     width: 22px;
     height: 21px;
-    right: 40px;
-    top: 2045px;
+    left: 90%;
+    bottom: 50px;
     border-radius: 0; }

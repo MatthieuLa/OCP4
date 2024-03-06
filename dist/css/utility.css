@@ -31,18 +31,25 @@
   width: 80px;
   height: 29px;
   color: rgba(0, 0, 0, 0.6);
-  border-radius: 3px; }
+  border-radius: 3px;
+  position: relative; }
 
-.third-block__text--new,
-.one {
+.third-block__text--new.one {
   position: absolute;
-  right: 30px;
-  top: 911px; }
+  left: 73%;
+  bottom: 80%; }
 
-.two {
+.third-block__text--new.two {
   position: absolute;
-  right: 30px;
-  top: 1210px; }
+  left: 73%;
+  bottom: 80%; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+a:hover {
+  color: #9356dc; }
 
 .footer-block {
   display: flex;

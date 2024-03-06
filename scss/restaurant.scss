@@ -1,34 +1,71 @@
 @import "utility";
 
-* {
-  box-sizing: border-box;
+// * {
+//   border: 1px solid red;
+// }
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 1.5em;
+}
+
+.image-block {
+  object-fit: cover;
+  z-index: 0;
+  position: relative;
 }
 
 .main-block {
   background-color: $bg--third--color;
   height: 100%;
-  border-radius: 10px 10px 0 0;
+  border-radius: 30px 30px 0 0;
   padding: 1em;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  bottom: 30px;
+
+  h2 {
+    position: relative;
+    display: inline-block;
+  }
+
+  h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Ajustez en fonction de l'espacement souhaité */
+    height: 4px; /* Épaisseur de la barre */
+    width: 50%; /* Ajustez pour contrôler la longueur de la barre */
+    background-color: $secondary--color;
+  }
 }
 
 .header-restaurant {
   font-family: Shrikhand, sans-serif;
+  font-size: 28px;
 }
 
 .heart {
   position: absolute;
   width: 22px;
-  height: 21px;
-  right: 40px;
+  left: 80%;
+  bottom: 95%;
   border-radius: 0;
 }
+
+// .green-bar {
+//   background-color: $secondary--color;
+//   height: 5px;
+//   width: 58px;
+// }
 
 .starters-block,
 .dishes-block,
 .desserts-block {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   margin: auto;
   width: 100%;
@@ -41,9 +78,8 @@
   background-color: $bg--primary--color;
   color: #000;
   border: none;
-  width: 100%;
   padding: 0.5em 1em;
-  border-radius: 5px;
+  border-radius: 15px;
   font-size: 1em;
   cursor: pointer;
   box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.05);
