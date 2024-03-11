@@ -193,6 +193,7 @@ input::placeholder {
   }
 
   .third-block__heart.two {
+    cursor: pointer;
     position: relative;
     width: 22px;
     height: 21px;
@@ -202,6 +203,7 @@ input::placeholder {
   }
 
   .third-block__heart.three {
+    cursor: pointer;
     position: relative;
     width: 22px;
     height: 21px;
@@ -211,12 +213,59 @@ input::placeholder {
   }
 
   .third-block__heart.four {
+    cursor: pointer;
     position: relative;
     width: 22px;
     height: 21px;
     left: 85%;
     bottom: 40px;
     border-radius: 0;
+  }
+}
+
+.heart-container {
+  .one.filled-heart {
+    position: absolute;
+    right: 20px;
+    bottom: 43px;
+    display: none;
+    z-index: 3;
+  }
+  .one.empty-heart:hover + .filled-heart {
+    display: inline;
+  }
+
+  .two.filled-heart {
+    position: absolute;
+    right: 20px;
+    bottom: 43px;
+    display: none;
+    z-index: 2;
+  }
+  .two.empty-heart:hover + .filled-heart {
+    display: inline;
+  }
+
+  .three.filled-heart {
+    position: absolute;
+    right: 20px;
+    bottom: 43px;
+    display: none;
+    z-index: 2;
+  }
+  .three.empty-heart:hover + .filled-heart {
+    display: inline;
+  }
+
+  .four.filled-heart {
+    position: absolute;
+    right: 20px;
+    bottom: 43px;
+    display: none;
+    z-index: 2;
+  }
+  .four.empty-heart:hover + .filled-heart {
+    display: inline;
   }
 }
 
