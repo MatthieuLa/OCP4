@@ -4,6 +4,10 @@
 //   border: 1px solid red;
 // }
 
+main {
+  margin-bottom: -29px;
+}
+
 .header-logo {
   display: flex;
   align-items: center;
@@ -26,14 +30,14 @@
   height: 100%;
   bottom: 30px;
 
-  h2 {
+  h3 {
     position: relative;
     display: inline-block;
     font-weight: 300;
     text-transform: uppercase; // Plus simple que de le faire en majuscule dans le HTML
   }
 
-  h2::after {
+  h3::after {
     content: "";
     position: absolute;
     left: 0;

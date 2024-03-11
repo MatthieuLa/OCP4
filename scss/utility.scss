@@ -1,3 +1,130 @@
+// Reset
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 // Couleurs
 
 $icon--color: #7e7e7e;
@@ -22,10 +149,60 @@ $secondary--color: #99e2d0;
   color: #fff;
   font-weight: 700;
   padding: 1.4em;
-  border-radius: 25px;
-  margin: 2.5em 3.5em;
-  width: 70%;
+  margin-top: 2.5em;
+  margin-left: 4em;
+  border-radius: 30px;
+  white-space: nowrap;
+  width: calc(100% - 8em);
+  font-size: 14px;
   cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.45);
+    transform: scale(1.03);
+  }
+
+  &:hover::after {
+    opacity: 1; // Augmentez l'opacité lors du survol
+    background: rgba(
+      255,
+      255,
+      255,
+      0.2
+    ); // Couleur de fond blanche avec une opacité de 0.2
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn--purple {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 200px;
+    width: 30%;
+    margin-right: 5em;
+  }
+
+  @media (min-width: 1024px) {
+    .btn--purple {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 200px;
+      width: 20%;
+      margin-right: 5em;
+    }
+  }
 }
 
 //Elipse - les boutons doivent être régler un peu plus en hauteur, mais si je règle le top manuellement, ça déplace deux boutons sur trois hors champs, à voir si je dois faire une classe spécifique pour les trois.
@@ -76,10 +253,6 @@ a {
   color: #000;
 }
 
-a:hover {
-  color: $primary--color;
-}
-
 // Footer
 
 .footer-block {
@@ -104,12 +277,13 @@ a:hover {
   }
 
   .footer__logo {
-    filter: invert(1); // Inversion du logo pour le footer
-    width: 100px;
+    color: #fff;
+    font-family: "Shrikhand", sans-serif;
+    font-size: 18px;
   }
 
   .footer-block__list {
-    width: 100%;
+    margin-left: 2.8em;
 
     .fa-solid,
     .fas {
@@ -121,5 +295,18 @@ a:hover {
   .footer-block__list li {
     display: flex;
     gap: 1em;
+  }
+
+  @media (min-width: 768px) {
+    .footer-block {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2em;
+      padding: 2em 5em;
+      font-size: 1em;
+      line-height: 1.7em;
+    }
   }
 }

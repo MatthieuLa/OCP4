@@ -12,7 +12,6 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./dist/css/main.css" />
-    <link rel="stylesheet" href="./dist/css/utility.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,11 +24,7 @@
 
     <header>
       <div class="header__logo">
-        <img
-          src="./assets/logo/ohmyfood@2x.svg"
-          alt="Logo de l'enseigne ohmyfood"
-          class="header__logo--img"
-        />
+        <h1 class="header__logo--txt">ohmyfood</h1>
       </div>
       <div class="header__container">
         <i class="fa-solid fa-location-dot"></i>
@@ -40,7 +35,7 @@
       <!-- First block -->
 
       <section class="first-block">
-        <h1>Réserver le menu qui vous&nbsp;convient</h1>
+        <h2>Réserver le menu qui vous&nbsp;convient</h2>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
         <button class="btn--purple">Explorer nos restaurants</button>
       </section>
@@ -48,20 +43,21 @@
       <!-- Second block -->
 
       <section class="second-block">
+        <h2>Fonctionnement</h2>
         <div class="second-block__wrapper">
-          <h2>Fonctionnement</h2>
-          <button>
+          <div>
             <span class="second-block__elipse">1</span>
             <i class="fa-solid fa-mobile-screen-button btn-scdwrap"></i>
             <p>Choisissez un restaurant</p>
-          </button>
-          <button>
+          </div>
+          <div>
             <span class="second-block__elipse">2</span>
-            <i class="fa-solid fa-list-ul btn-scdwrap"></i>Composez votre menu</button
-          ><button>
+            <i class="fa-solid fa-list-ul btn-scdwrap"></i>Composez votre menu
+          </div>
+          <div>
             <span class="second-block__elipse">3</span>
             <i class="fa-solid fa-store btn-scdwrap"></i>Dégustez au restaurant
-          </button>
+          </div>
         </div>
       </section>
 
@@ -82,12 +78,14 @@
                   <h3>La palette du goût</h3>
                   <p>Ménilmontant</p>
                 </div>
+              </a>
+              <div class="heart-container">
                 <img
                   src="./assets/heart.svg"
                   alt=""
-                  class="third-block__heart one"
+                  class="third-block__heart one empty-heart"
                 />
-              </a>
+              </div>
             </div>
             <div class="third-block__card">
               <img
@@ -143,7 +141,7 @@
     <!-- Footer -->
 
     <footer class="footer-block">
-      <img src="./assets/logo/ohmyfood@2x.svg" alt="" class="footer__logo" />
+      <h3 class="footer__logo">ohmyfood</h3>
       <div class="footer-block__list">
         <ul>
           <li>

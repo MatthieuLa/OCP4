@@ -1,0 +1,108 @@
+@media (min-width: 768px) {
+  .first-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: cyan;
+  }
+
+  .second-block {
+    h2 {
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 0.7em;
+      margin-left: 1em;
+    }
+  }
+
+  .second-block__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 2em 0;
+    padding: 1em;
+    background-color: $bg--secondary--color;
+    margin-bottom: 3em;
+
+    button {
+      display: flex;
+      border: none;
+      padding: 1.6em;
+      border-radius: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+      width: 92%;
+      margin: auto;
+      gap: 2em;
+      font-weight: 600;
+      align-items: center;
+      height: 70px;
+      cursor: pointer;
+    }
+
+    button:hover i {
+      color: $primary--color;
+    }
+
+    .btn-scdwrap {
+      color: $icon--color;
+      font-size: 20px;
+      align-self: center;
+    }
+  }
+
+  .third-block__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 2em 0;
+    padding: 1em;
+    background-color: $bg--secondary--color;
+    margin-bottom: 3em;
+    flex-wrap: wrap;
+
+    h2 {
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 0.7em;
+      margin-left: 1em;
+    }
+
+    button {
+      display: flex;
+      border: none;
+      padding: 1.6em;
+      border-radius: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+      width: 92%;
+      margin: auto;
+      gap: 2em;
+      font-weight: 600;
+      align-items: center;
+      height: 70px;
+      cursor: pointer;
+    }
+
+    button:hover i {
+      color: $primary--color;
+    }
+
+    .third-block__cards-wrapper {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .btn-scdwrap {
+      color: $icon--color;
+      font-size: 20px;
+      align-self: center;
+    }
+  }
+
+  .third-block__card {
+    width: 100%;
+  }
+}

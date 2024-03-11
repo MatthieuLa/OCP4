@@ -1,7 +1,7 @@
 @import "utility";
 
 // * {
-//   border: 1px red solid;
+//   border: 1px solid red !important;
 // }
 
 img {
@@ -35,17 +35,21 @@ input::placeholder {
 
 // Header
 
-// Mixin pour le logo ? Il se retrouve en top de toute les pages.
 .header__logo {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   z-index: 1;
 }
 
-.header__logo--img {
+.header__logo--txt {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
-  height: 100%;
-  margin: 1em auto;
+  height: 64px;
+  margin: auto;
+  font-family: Shrikhand, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .header__container {
@@ -55,8 +59,8 @@ input::placeholder {
   background-color: #eaeaea;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-  i {
-    position: sticky;
+  input {
+    width: 100px;
   }
 }
 
@@ -65,9 +69,13 @@ input::placeholder {
 .first-block {
   background-color: $bg--primary--color;
   padding: 2em;
-  h1 {
+  h2 {
     text-align: center;
     width: 100%;
+    line-height: 1.3em;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 1em;
   }
 
   p {
@@ -79,25 +87,41 @@ input::placeholder {
 
 //  Second block
 
+.second-block {
+  h2 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 0.7em;
+    margin-left: 1em;
+    margin-top: 2em;
+  }
+}
+
 .second-block__wrapper {
   display: flex;
   flex-direction: column;
   gap: 1em;
   margin: 2em 0;
-  padding: 1em;
   background-color: $bg--secondary--color;
   margin-bottom: 3em;
 
-  button {
+  div {
     display: flex;
     border: none;
     padding: 1.6em;
     border-radius: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-    width: 92%;
+    width: 80%;
     margin: auto;
     gap: 2em;
     font-weight: 600;
+    align-items: center;
+    background-color: $bg--primary--color;
+    cursor: pointer;
+  }
+
+  div:hover i {
+    color: $primary--color;
   }
 
   .btn-scdwrap {
@@ -112,13 +136,21 @@ input::placeholder {
 .third-block {
   background-color: $bg--primary--color;
   margin: 2em 0;
-  padding: 1em;
-  margin-bottom: 3em;
+
+  .third-block__wrapper h2 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 1.3em;
+    margin-left: 1em;
+    margin-top: 3em;
+    width: 90%;
+  }
 
   .third-block__cards-wrapper {
     display: flex;
     flex-direction: column;
     gap: 1.4em;
+    margin: 1em;
   }
 
   .third-block__card {
@@ -132,21 +164,31 @@ input::placeholder {
       width: 100%;
       border-radius: 20px 20px 0 0;
     }
+
     .third-block__text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      margin-top: 1em;
       margin-left: 1em;
-      line-height: 0.2em;
+
+      h3 {
+        font-weight: 600;
+        line-height: 1.2em;
+      }
       p {
-        font-weight: 300;
+        font-weight: 3001;
       }
     }
   }
 
   .third-block__heart.one {
+    cursor: pointer;
     position: relative;
     width: 22px;
     height: 21px;
-    left: 90%;
-    bottom: 50px;
+    left: 85%;
+    bottom: 40px;
     border-radius: 0;
   }
 
@@ -154,8 +196,8 @@ input::placeholder {
     position: relative;
     width: 22px;
     height: 21px;
-    left: 90%;
-    bottom: 50px;
+    left: 85%;
+    bottom: 40px;
     border-radius: 0;
   }
 
@@ -163,8 +205,8 @@ input::placeholder {
     position: relative;
     width: 22px;
     height: 21px;
-    left: 90%;
-    bottom: 50px;
+    left: 85%;
+    bottom: 40px;
     border-radius: 0;
   }
 
@@ -172,8 +214,115 @@ input::placeholder {
     position: relative;
     width: 22px;
     height: 21px;
-    left: 90%;
-    bottom: 50px;
+    left: 85%;
+    bottom: 40px;
     border-radius: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .first-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .second-block {
+    h2 {
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 0.7em;
+      margin-left: 1em;
+    }
+  }
+
+  .second-block__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 2em 0;
+    padding: 1em;
+    background-color: $bg--secondary--color;
+    margin-bottom: 3em;
+
+    button {
+      display: flex;
+      border: none;
+      padding: 1.6em;
+      border-radius: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+      width: 92%;
+      margin: auto;
+      gap: 2em;
+      font-weight: 600;
+      align-items: center;
+      height: 70px;
+      cursor: pointer;
+    }
+
+    button:hover i {
+      color: $primary--color;
+    }
+
+    .btn-scdwrap {
+      color: $icon--color;
+      font-size: 20px;
+      align-self: center;
+    }
+  }
+
+  .third-block__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 2em 0;
+    padding: 1em;
+    background-color: $bg--secondary--color;
+    margin-bottom: 3em;
+    flex-wrap: wrap;
+
+    h2 {
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 0.7em;
+      margin-left: 1em;
+    }
+
+    button {
+      display: flex;
+      border: none;
+      padding: 1.6em;
+      border-radius: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+      width: 92%;
+      margin: auto;
+      gap: 2em;
+      font-weight: 600;
+      align-items: center;
+      height: 70px;
+      cursor: pointer;
+    }
+
+    button:hover i {
+      color: $primary--color;
+    }
+
+    .third-block__cards-wrapper {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .btn-scdwrap {
+      color: $icon--color;
+      font-size: 20px;
+      align-self: center;
+    }
+  }
+
+  .third-block__card {
+    width: 100%;
   }
 }
