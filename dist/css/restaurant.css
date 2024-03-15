@@ -123,7 +123,6 @@ table {
   border-spacing: 0; }
 
 .btn--purple {
-  background: #9356dc;
   background: linear-gradient(0deg, #9356dc 8%, #ff79da 100%);
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
   border: none;
@@ -136,21 +135,11 @@ table {
   white-space: nowrap;
   width: calc(100% - 8em);
   font-size: 14px;
-  cursor: pointer; }
+  cursor: pointer;
+  transition-delay: 0.3s; }
   .btn--purple:hover {
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.45);
-    transform: scale(1.03); }
-  .btn--purple:hover::after {
-    opacity: 1;
-    background: rgba(255, 255, 255, 0.2); }
-  .btn--purple::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0; }
+    background: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 8%, rgba(255, 121, 218, 0.9) 100%);
+    transform: translateY(2px); }
 
 @media (min-width: 768px) {
   .btn--purple {
@@ -180,7 +169,7 @@ table {
   height: 24px;
   border-radius: 20px;
   position: relative;
-  left: -33px; }
+  left: -30px; }
 
 .third-block__text--new {
   display: flex;
@@ -202,6 +191,102 @@ table {
   position: absolute;
   left: 73%;
   bottom: 80%; }
+
+.third-block__cards .heart-container.one {
+  cursor: pointer;
+  position: relative;
+  width: 22px;
+  height: 21px;
+  left: 85%;
+  bottom: 40px;
+  border-radius: 0; }
+
+.third-block__cards .heart-container.two {
+  cursor: pointer;
+  position: relative;
+  width: 22px;
+  height: 21px;
+  left: 85%;
+  bottom: 40px;
+  border-radius: 0; }
+
+.third-block__cards .heart-container.three {
+  cursor: pointer;
+  position: relative;
+  width: 22px;
+  height: 21px;
+  left: 85%;
+  bottom: 40px;
+  border-radius: 0; }
+
+.third-block__cards .heart-container.four {
+  cursor: pointer;
+  position: relative;
+  width: 22px;
+  height: 21px;
+  left: 85%;
+  bottom: 40px;
+  border-radius: 0; }
+
+.heart-container .one.filled-heart {
+  position: absolute;
+  right: 20px;
+  bottom: 43px;
+  display: none;
+  z-index: 3; }
+
+.heart-container .one.empty-heart:hover + .filled-heart {
+  display: inline; }
+
+.heart-container .two.filled-heart {
+  position: absolute;
+  right: 20px;
+  bottom: 43px;
+  display: none;
+  z-index: 2; }
+
+.heart-container .two.empty-heart:hover + .filled-heart {
+  display: inline; }
+
+.heart-container .three.filled-heart {
+  position: absolute;
+  right: 20px;
+  bottom: 43px;
+  display: none;
+  z-index: 2; }
+
+.heart-container .three.empty-heart:hover + .filled-heart {
+  display: inline; }
+
+.heart-container .four.filled-heart {
+  position: absolute;
+  right: 20px;
+  bottom: 43px;
+  display: none;
+  z-index: 2; }
+
+.heart-container .four.empty-heart:hover + .filled-heart {
+  display: inline; }
+
+.heart-container.page {
+  position: relative;
+  width: 22px;
+  height: 21px;
+  left: 87%;
+  bottom: 60px;
+  z-index: 2; }
+
+.heart-container.filled-heart {
+  position: relative;
+  width: 22px;
+  height: 21px;
+  left: 80.5%;
+  bottom: 60px;
+  display: none;
+  z-index: 3; }
+
+.page:hover + .filled-heart {
+  display: inline; }
 
 a {
   text-decoration: none;
@@ -286,7 +371,7 @@ main {
   margin-bottom: 1.3em;
   margin-top: 0.7em; }
 
-.heart {
+.heart-container--heart {
   position: absolute;
   width: 22px;
   left: 83%;

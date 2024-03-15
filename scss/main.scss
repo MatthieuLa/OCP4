@@ -101,9 +101,8 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  margin: 2em 0;
+
   background-color: $bg--secondary--color;
-  margin-bottom: 3em;
 
   div {
     display: flex;
@@ -112,12 +111,18 @@ input::placeholder {
     border-radius: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     width: 80%;
+    height: 3em;
     margin: auto;
     gap: 2em;
+    padding: 1em;
     font-weight: 600;
     align-items: center;
     background-color: $bg--primary--color;
     cursor: pointer;
+
+    p {
+      white-space: nowrap;
+    }
   }
 
   div:hover i {
@@ -180,92 +185,6 @@ input::placeholder {
         font-weight: 3001;
       }
     }
-  }
-
-  .heart-container.one {
-    cursor: pointer;
-    position: relative;
-    width: 22px;
-    height: 21px;
-    left: 85%;
-    bottom: 40px;
-    border-radius: 0;
-  }
-
-  .heart-container.two {
-    cursor: pointer;
-    position: relative;
-    width: 22px;
-    height: 21px;
-    left: 85%;
-    bottom: 40px;
-    border-radius: 0;
-  }
-
-  .heart-container.three {
-    cursor: pointer;
-    position: relative;
-    width: 22px;
-    height: 21px;
-    left: 85%;
-    bottom: 40px;
-    border-radius: 0;
-  }
-
-  .heart-container.four {
-    cursor: pointer;
-    position: relative;
-    width: 22px;
-    height: 21px;
-    left: 85%;
-    bottom: 40px;
-    border-radius: 0;
-  }
-}
-
-.heart-container {
-  .one.filled-heart {
-    position: absolute;
-    right: 20px;
-    bottom: 43px;
-    display: none;
-    z-index: 3;
-  }
-  .one.empty-heart:hover + .filled-heart {
-    display: inline;
-  }
-
-  .two.filled-heart {
-    position: absolute;
-    right: 20px;
-    bottom: 43px;
-    display: none;
-    z-index: 2;
-  }
-  .two.empty-heart:hover + .filled-heart {
-    display: inline;
-  }
-
-  .three.filled-heart {
-    position: absolute;
-    right: 20px;
-    bottom: 43px;
-    display: none;
-    z-index: 2;
-  }
-  .three.empty-heart:hover + .filled-heart {
-    display: inline;
-  }
-
-  .four.filled-heart {
-    position: absolute;
-    right: 20px;
-    bottom: 43px;
-    display: none;
-    z-index: 2;
-  }
-  .four.empty-heart:hover + .filled-heart {
-    display: inline;
   }
 }
 
