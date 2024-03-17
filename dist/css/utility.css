@@ -171,6 +171,11 @@ table {
   position: relative;
   left: -30px; }
 
+@media (min-width: 768px) {
+  .second-block__elipse {
+    left: -24px;
+    max-width: 42px; } }
+
 .third-block__text--new {
   display: flex;
   justify-content: center;
@@ -308,26 +313,31 @@ a {
   .footer-block li {
     list-style: none;
     margin-left: -2.7em; }
-  .footer-block .footer__logo {
+  .footer-block .footer-block__logo {
     color: #fff;
     font-family: "Shrikhand", sans-serif;
     font-size: 18px; }
   .footer-block .footer-block__list {
     margin-left: 2.8em; }
+    .footer-block .footer-block__list li {
+      display: flex;
+      gap: 1em; }
     .footer-block .footer-block__list .fa-solid,
     .footer-block .footer-block__list .fas {
       width: 12px;
       height: 13px; }
-  .footer-block .footer-block__list li {
+
+@media (min-width: 768px) {
+  .footer-block {
     display: flex;
-    gap: 1em; }
-  @media (min-width: 768px) {
-    .footer-block .footer-block {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 2em;
+    padding: 2em 5em;
+    font-size: 1em;
+    line-height: 1.7em; }
+    .footer-block .footer-block__logo {
+      margin-left: 3em; }
+    .footer-block .footer-block__list ul {
       display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      align-items: center;
-      gap: 2em;
-      padding: 2em 5em;
-      font-size: 1em;
-      line-height: 1.7em; } }
+      gap: 3em; } }

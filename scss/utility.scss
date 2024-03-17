@@ -205,6 +205,17 @@ $secondary--color: #99e2d0;
   left: -30px;
 }
 
+@media (min-width: 768px) {
+  .second-block__elipse {
+    left: -24px;
+    max-width: 42px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .second-block__elipse {
+  }
+}
 // Third block texte new
 
 .third-block__text--new {
@@ -231,7 +242,8 @@ $secondary--color: #99e2d0;
   bottom: 80%;
 }
 
-//
+// Coeurs de l'index
+
 .third-block__cards {
   .heart-container.one {
     cursor: pointer;
@@ -274,7 +286,7 @@ $secondary--color: #99e2d0;
   }
 }
 
-// Coeurs de l'index
+// Effets survols coeurs de l'index
 
 .heart-container {
   .one.filled-heart {
@@ -376,7 +388,7 @@ a {
     margin-left: -2.7em;
   }
 
-  .footer__logo {
+  .footer-block__logo {
     color: #fff;
     font-family: "Shrikhand", sans-serif;
     font-size: 18px;
@@ -385,28 +397,38 @@ a {
   .footer-block__list {
     margin-left: 2.8em;
 
+    li {
+      display: flex;
+      gap: 1em;
+    }
+
     .fa-solid,
     .fas {
       width: 12px;
       height: 13px;
     }
   }
+}
 
-  .footer-block__list li {
+@media (min-width: 768px) {
+  .footer-block {
     display: flex;
-    gap: 1em;
-  }
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 2em;
+    padding: 2em 5em;
+    font-size: 1em;
+    line-height: 1.7em;
 
-  @media (min-width: 768px) {
-    .footer-block {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      align-items: center;
-      gap: 2em;
-      padding: 2em 5em;
-      font-size: 1em;
-      line-height: 1.7em;
+    .footer-block__logo {
+      margin-left: 3em;
+    }
+
+    .footer-block__list {
+      ul {
+        display: flex;
+        gap: 3em;
+      }
     }
   }
 }

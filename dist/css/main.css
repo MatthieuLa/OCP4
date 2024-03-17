@@ -171,6 +171,11 @@ table {
   position: relative;
   left: -30px; }
 
+@media (min-width: 768px) {
+  .second-block__elipse {
+    left: -24px;
+    max-width: 42px; } }
+
 .third-block__text--new {
   display: flex;
   justify-content: center;
@@ -308,29 +313,34 @@ a {
   .footer-block li {
     list-style: none;
     margin-left: -2.7em; }
-  .footer-block .footer__logo {
+  .footer-block .footer-block__logo {
     color: #fff;
     font-family: "Shrikhand", sans-serif;
     font-size: 18px; }
   .footer-block .footer-block__list {
     margin-left: 2.8em; }
+    .footer-block .footer-block__list li {
+      display: flex;
+      gap: 1em; }
     .footer-block .footer-block__list .fa-solid,
     .footer-block .footer-block__list .fas {
       width: 12px;
       height: 13px; }
-  .footer-block .footer-block__list li {
+
+@media (min-width: 768px) {
+  .footer-block {
     display: flex;
-    gap: 1em; }
-  @media (min-width: 768px) {
-    .footer-block .footer-block {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 2em;
+    padding: 2em 5em;
+    font-size: 1em;
+    line-height: 1.7em; }
+    .footer-block .footer-block__logo {
+      margin-left: 3em; }
+    .footer-block .footer-block__list ul {
       display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      align-items: center;
-      gap: 2em;
-      padding: 2em 5em;
-      font-size: 1em;
-      line-height: 1.7em; } }
+      gap: 3em; } }
 
 img {
   width: 100%;
@@ -396,12 +406,15 @@ input::placeholder {
     margin: auto 1em;
     font-weight: 300; }
 
-.second-block h2 {
-  font-weight: 600;
-  font-size: 24px;
-  margin-bottom: 0.7em;
-  margin-left: 1em;
-  margin-top: 2em; }
+.second-block {
+  margin-bottom: 2em; }
+  .second-block h2 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 0.7em;
+    margin-left: 1em;
+    margin-top: 2em;
+    margin-bottom: 1.5em; }
 
 .second-block__wrapper {
   display: flex;
@@ -434,13 +447,14 @@ input::placeholder {
 
 .third-block {
   background-color: #f6f6f6;
-  margin: 2em 0; }
+  padding: 0.2em;
+  height: 85em; }
   .third-block .third-block__wrapper h2 {
     font-weight: 600;
     font-size: 24px;
-    margin-bottom: 1.3em;
+    margin-bottom: 1.1em;
     margin-left: 1em;
-    margin-top: 3em;
+    margin-top: 1.8em;
     width: 90%; }
   .third-block .third-block__cards--wrapper {
     display: flex;
@@ -466,28 +480,35 @@ input::placeholder {
         font-weight: 600;
         line-height: 1.2em; }
       .third-block .third-block__cards .third-block__text p {
-        font-weight: 3001; }
+        font-weight: 300; }
 
 @media (min-width: 768px) {
+  header {
+    width: 100%; }
   .first-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
-  .second-block h2 {
-    font-weight: 600;
-    font-size: 24px;
-    margin-bottom: 0.7em;
-    margin-left: 1em; }
+    align-items: center;
+    flex-wrap: wrap; }
+  .second-block {
+    margin: 2em 20px; }
+    .second-block h2 {
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 0.7em;
+      margin-left: 1em; }
   .second-block__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 25px;
-    margin: 2em 0;
     padding: 1em;
-    background-color: #fff;
-    margin-bottom: 3em; }
+    background-color: #fff; }
+    .second-block__wrapper div {
+      width: 27%; }
+      .second-block__wrapper div p {
+        white-space: wrap; }
     .second-block__wrapper button {
       display: flex;
       border: none;
@@ -507,42 +528,52 @@ input::placeholder {
       color: #7e7e7e;
       font-size: 20px;
       align-self: center; }
-  .third-block__wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    margin: 2em 0;
-    padding: 1em;
-    background-color: #fff;
-    margin-bottom: 3em;
-    flex-wrap: wrap; }
-    .third-block__wrapper h2 {
-      font-weight: 600;
-      font-size: 24px;
-      margin-bottom: 0.7em;
-      margin-left: 1em; }
-    .third-block__wrapper button {
+  .third-block {
+    height: 45em; }
+    .third-block .third-block__wrapper {
       display: flex;
-      border: none;
-      padding: 1.6em;
-      border-radius: 20px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-      width: 92%;
-      margin: auto;
-      gap: 2em;
-      font-weight: 600;
-      align-items: center;
-      height: 70px;
-      cursor: pointer; }
-    .third-block__wrapper button:hover i {
-      color: #9356dc; }
-    .third-block__wrapper .third-block__cards--wrapper {
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: 1fr 1fr; }
-    .third-block__wrapper .btn-scdwrap {
-      color: #7e7e7e;
-      font-size: 20px;
-      align-self: center; }
-  .third-block__cards {
-    width: 100%; } }
+      flex-direction: column;
+      margin: 2em 0;
+      padding: 1em;
+      flex-wrap: wrap; }
+      .third-block .third-block__wrapper h2 {
+        margin-top: 0;
+        margin-bottom: 0; }
+      .third-block .third-block__wrapper button {
+        display: flex;
+        border: none;
+        padding: 1.6em;
+        border-radius: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        width: 92%;
+        margin: auto;
+        gap: 2em;
+        font-weight: 600;
+        align-items: center;
+        height: 70px;
+        cursor: pointer; }
+      .third-block .third-block__wrapper button:hover i {
+        color: #9356dc; }
+      .third-block .third-block__wrapper .third-block__cards--wrapper {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 2em; }
+      .third-block .third-block__wrapper .btn-scdwrap {
+        color: #7e7e7e;
+        font-size: 20px;
+        align-self: center; }
+    .third-block .third-block__cards {
+      width: 100%; } }
+
+@media (min-width: 768px) and (min-width: 1024px) {
+  .second-block {
+    margin: 2em 150px; }
+  .second-block__wrapper {
+    flex-wrap: nowrap; }
+  .third-block .third-block__wrapper {
+    margin: 0 6em; }
+  .footer-block .footer-block__list ul {
+    gap: 4em; }
+    .footer-block .footer-block__list ul li:nth-child(3) {
+      margin-left: 1px; } }
