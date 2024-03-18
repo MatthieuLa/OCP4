@@ -174,7 +174,7 @@ $secondary--color: #99e2d0;
     align-items: center;
     justify-content: center;
     top: 200px;
-    width: 30%;
+    width: 16em;
     margin-right: 5em;
   }
 
@@ -184,7 +184,7 @@ $secondary--color: #99e2d0;
       align-items: center;
       justify-content: center;
       top: 200px;
-      width: 20%;
+      width: 16em;
       margin-right: 5em;
     }
   }
@@ -200,6 +200,8 @@ $secondary--color: #99e2d0;
   color: $bg--secondary--color;
   width: 24px;
   height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   border-radius: 20px;
   position: relative;
   left: -30px;
@@ -207,39 +209,8 @@ $secondary--color: #99e2d0;
 
 @media (min-width: 768px) {
   .second-block__elipse {
-    left: -24px;
-    max-width: 42px;
+    left: -27px;
   }
-}
-
-@media (min-width: 1024px) {
-  .second-block__elipse {
-  }
-}
-// Third block texte new
-
-.third-block__text--new {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $secondary--color;
-  width: 80px;
-  height: 29px;
-  color: rgba($color: #000000, $alpha: 0.6);
-  border-radius: 3px;
-  position: relative;
-}
-
-.third-block__text--new.one {
-  position: absolute;
-  left: 73%;
-  bottom: 80%;
-}
-
-.third-block__text--new.two {
-  position: absolute;
-  left: 73%;
-  bottom: 80%;
 }
 
 // Coeurs de l'index
@@ -370,7 +341,7 @@ a {
 .footer-block {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1.7em;
   background-color: $bg--footer--color;
   color: $bg--secondary--color;
   padding: 2em;
@@ -381,6 +352,11 @@ a {
   a {
     color: #fff;
     text-decoration: none;
+  }
+
+  a:nth-child(2) {
+    line-height: 20px;
+    font-weight: 500;
   }
 
   li {
@@ -397,6 +373,11 @@ a {
   .footer-block__list {
     margin-left: 2.8em;
 
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2em;
+    }
     li {
       display: flex;
       gap: 1em;
@@ -427,7 +408,26 @@ a {
     .footer-block__list {
       ul {
         display: flex;
-        gap: 3em;
+        gap: 4em;
+        flex-direction: row;
+
+        li:nth-child(3) {
+          margin-left: 1px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-block {
+    .footer-block__list {
+      ul {
+        gap: 4em;
+
+        li:nth-child(3) {
+          margin-left: 1px;
+        }
       }
     }
   }

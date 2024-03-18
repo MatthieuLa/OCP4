@@ -147,7 +147,7 @@ table {
     align-items: center;
     justify-content: center;
     top: 200px;
-    width: 30%;
+    width: 16em;
     margin-right: 5em; } }
 
 @media (min-width: 768px) and (min-width: 1024px) {
@@ -156,7 +156,7 @@ table {
     align-items: center;
     justify-content: center;
     top: 200px;
-    width: 20%;
+    width: 16em;
     margin-right: 5em; } }
 
 .second-block__elipse {
@@ -167,35 +167,15 @@ table {
   color: #fff;
   width: 24px;
   height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   border-radius: 20px;
   position: relative;
   left: -30px; }
 
 @media (min-width: 768px) {
   .second-block__elipse {
-    left: -24px;
-    max-width: 42px; } }
-
-.third-block__text--new {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #99e2d0;
-  width: 80px;
-  height: 29px;
-  color: rgba(0, 0, 0, 0.6);
-  border-radius: 3px;
-  position: relative; }
-
-.third-block__text--new.one {
-  position: absolute;
-  left: 73%;
-  bottom: 80%; }
-
-.third-block__text--new.two {
-  position: absolute;
-  left: 73%;
-  bottom: 80%; }
+    left: -27px; } }
 
 .third-block__cards .heart-container.one {
   cursor: pointer;
@@ -300,7 +280,7 @@ a {
 .footer-block {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1.7em;
   background-color: #353535;
   color: #fff;
   padding: 2em;
@@ -310,6 +290,9 @@ a {
   .footer-block a {
     color: #fff;
     text-decoration: none; }
+  .footer-block a:nth-child(2) {
+    line-height: 20px;
+    font-weight: 500; }
   .footer-block li {
     list-style: none;
     margin-left: -2.7em; }
@@ -319,6 +302,10 @@ a {
     font-size: 18px; }
   .footer-block .footer-block__list {
     margin-left: 2.8em; }
+    .footer-block .footer-block__list ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2em; }
     .footer-block .footer-block__list li {
       display: flex;
       gap: 1em; }
@@ -340,4 +327,13 @@ a {
       margin-left: 3em; }
     .footer-block .footer-block__list ul {
       display: flex;
-      gap: 3em; } }
+      gap: 4em;
+      flex-direction: row; }
+      .footer-block .footer-block__list ul li:nth-child(3) {
+        margin-left: 1px; } }
+
+@media (min-width: 1024px) {
+  .footer-block .footer-block__list ul {
+    gap: 4em; }
+    .footer-block .footer-block__list ul li:nth-child(3) {
+      margin-left: 1px; } }
