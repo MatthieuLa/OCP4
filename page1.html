@@ -34,12 +34,12 @@
     <main>
       <!-- Image -->
 
-      <section class="image-block">
+      <div class="image-block">
         <img
           src="./assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
           alt="Des plats sur une table de restaurant"
         />
-      </section>
+      </div>
 
       <!-- First block restaurant -->
 
@@ -58,58 +58,76 @@
               class="heart-container__heart--filled"
             />
           </div>
-
-          <!-- Starters -->
-
+        </div>
+        <!-- Starters -->
+        <section>
           <h3>Entrées</h3>
           <div class="green-bar"></div>
           <div class="starters-block">
-            <div class="menu-block__button">
-              <h4>Fricassée d'escargots</h4>
-              <p class="menu-block__button--txt">
-                Au piment d'Espelette<span>25€</span>
-              </p>
-            </div>
-            <div class="menu-block__button">
-              <h4>Foie gras de canard mi-cuit</h4>
-              <p class="menu-block__button--txt">
-                Et ses copeaux de truffe noire <span>35€</span>
-              </p>
-            </div>
-            <div class="menu-block__button">
-              <h4>Oeuf au plat</h4>
-              <p class="menu-block__button--txt">
-                Assaisonné à la truffe sur lit de caviar<span>20€</span>
-              </p>
-            </div>
+            <article>
+              <div class="menu-block__button">
+                <h4>Fricassée d'escargots</h4>
+                <p class="menu-block__button--txt">Au piment d'Espelette</p>
+                <span>25€</span>
+                <span class="menu-block__button--check background"
+                  ><i
+                    class="fa-solid fa-circle-check menu-block__button--check mark"
+                  ></i
+                ></span>
+              </div>
+            </article>
+            <article>
+              <div class="menu-block__button">
+                <h4>Foie gras de canard mi-cuit</h4>
+                <p class="menu-block__button--txt">
+                  Et ses copeaux de truffe noire <span>35€</span>
+                </p>
+              </div>
+            </article>
+            <article>
+              <div class="menu-block__button">
+                <h4>Oeuf au plat</h4>
+                <p class="menu-block__button--txt">
+                  Assaisonné à la truffe sur lit de caviar<span>20€</span>
+                </p>
+              </div>
+            </article>
           </div>
-          <!-- Dishes -->
-
+        </section>
+        <!-- Dishes -->
+        <section>
           <h3>Plats</h3>
           <div class="green-bar"></div>
           <div class="dishes-block">
-            <div class="menu-block__button">
-              <h4>Filet de boeuf aux herbes</h4>
-              <p class="menu-block__button--txt">
-                Accompagné de sa ribambelle de légumes<span>40€</span>
-              </p>
-            </div>
-            <div class="menu-block__button">
-              <h4>Parmentier de queue de boeuf</h4>
-              <p class="menu-block__button--txt">
-                À la truffe noire sur sa purée de panais<span>35€</span>
-              </p>
-            </div>
-            <div class="menu-block__button">
-              <h4>Filet de turbot</h4>
-              <p class="menu-block__button--txt">
-                Aux agrumes <span>44€</span>
-              </p>
-            </div>
+            <article>
+              <div class="menu-block__button">
+                <h4>Filet de boeuf aux herbes</h4>
+                <p class="menu-block__button--txt">
+                  Accompagné de sa ribambelle de légumes<span>40€</span>
+                </p>
+              </div>
+            </article>
+            <article>
+              <div class="menu-block__button">
+                <h4>Parmentier de queue de boeuf</h4>
+                <p class="menu-block__button--txt">
+                  À la truffe noire sur sa purée de panais<span>35€</span>
+                </p>
+              </div>
+            </article>
+            <article>
+              <div class="menu-block__button">
+                <h4>Filet de turbot</h4>
+                <p class="menu-block__button--txt">
+                  Aux agrumes <span>44€</span>
+                </p>
+              </div>
+            </article>
           </div>
+        </section>
 
-          <!-- Desserts -->
-
+        <!-- Desserts -->
+        <section>
           <h3>desserts</h3>
           <div class="green-bar"></div>
           <div class="desserts-block">
@@ -133,10 +151,9 @@
             </div>
 
             <!-- Second block div -->
-
             <button class="btn--purple">Commander</button>
           </div>
-        </div>
+        </section>
       </section>
     </main>
 
