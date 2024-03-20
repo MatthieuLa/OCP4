@@ -164,7 +164,7 @@ $secondary--color: #99e2d0;
       rgba(147, 86, 220, 0.9) 8%,
       rgba(255, 121, 218, 0.9) 100%
     );
-    transform: translateY(2px);
+    box-shadow: 0 6px 10px 1px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -216,93 +216,39 @@ $secondary--color: #99e2d0;
 // Coeurs de l'index
 
 .third-block__cards {
-  .heart-container.one {
+  .heart-container {
     cursor: pointer;
-    position: relative;
+    position: absolute;
     width: 22px;
     height: 21px;
     left: 85%;
-    bottom: 40px;
+    bottom: 10%;
     border-radius: 0;
-  }
 
-  .heart-container.two {
-    cursor: pointer;
-    position: relative;
-    width: 22px;
-    height: 21px;
-    left: 85%;
-    bottom: 40px;
-    border-radius: 0;
-  }
+    .heart-container__heart {
+      position: relative;
+      width: 22px;
+      height: 21px;
+      border-radius: 0;
+      opacity: 1;
+    }
 
-  .heart-container.three {
-    cursor: pointer;
-    position: relative;
-    width: 22px;
-    height: 21px;
-    left: 85%;
-    bottom: 40px;
-    border-radius: 0;
-  }
-
-  .heart-container.four {
-    cursor: pointer;
-    position: relative;
-    width: 22px;
-    height: 21px;
-    left: 85%;
-    bottom: 40px;
-    border-radius: 0;
+    .heart-container__heart--filled {
+      position: absolute;
+      width: 22px;
+      height: 21px;
+      left: 0%;
+      border-radius: 0;
+      opacity: 0;
+    }
   }
 }
 
 // Effets survols coeurs de l'index
 
-.heart-container {
-  .one.filled-heart {
-    position: absolute;
-    right: 20px;
-    bottom: 43px;
-    display: none;
-    z-index: 3;
-  }
-  .one.empty-heart:hover + .filled-heart {
-    display: inline;
-  }
-
-  .two.filled-heart {
-    position: absolute;
-    right: 20px;
-    bottom: 43px;
-    display: none;
-    z-index: 2;
-  }
-  .two.empty-heart:hover + .filled-heart {
-    display: inline;
-  }
-
-  .three.filled-heart {
-    position: absolute;
-    right: 20px;
-    bottom: 43px;
-    display: none;
-    z-index: 2;
-  }
-  .three.empty-heart:hover + .filled-heart {
-    display: inline;
-  }
-
-  .four.filled-heart {
-    position: absolute;
-    right: 20px;
-    bottom: 43px;
-    display: none;
-    z-index: 2;
-  }
-  .four.empty-heart:hover + .filled-heart {
-    display: inline;
-  }
+.heart-container:hover > .heart-container__heart--filled {
+  transition: opacity 0.5s;
+  opacity: 1;
 }
 
 // Coeurs pages restaurant
@@ -391,7 +337,7 @@ a {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer-block {
     display: flex;
     flex-direction: row-reverse;
@@ -407,23 +353,10 @@ a {
 
     .footer-block__list {
       ul {
+        gap: 4em;
         display: flex;
-        gap: 4em;
         flex-direction: row;
-
-        li:nth-child(3) {
-          margin-left: 1px;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 1024px) {
-  .footer-block {
-    .footer-block__list {
-      ul {
-        gap: 4em;
+        align-items: center;
 
         li:nth-child(3) {
           margin-left: 1px;

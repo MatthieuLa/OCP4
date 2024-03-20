@@ -139,7 +139,7 @@ table {
   transition-delay: 0.3s; }
   .btn--purple:hover {
     background: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 8%, rgba(255, 121, 218, 0.9) 100%);
-    transform: translateY(2px); }
+    box-shadow: 0 6px 10px 1px rgba(0, 0, 0, 0.2); }
 
 @media (min-width: 768px) {
   .btn--purple {
@@ -177,81 +177,31 @@ table {
   .second-block__elipse {
     left: -27px; } }
 
-.third-block__cards .heart-container.one {
+.third-block__cards .heart-container {
   cursor: pointer;
-  position: relative;
+  position: absolute;
   width: 22px;
   height: 21px;
   left: 85%;
-  bottom: 40px;
+  bottom: 10%;
   border-radius: 0; }
+  .third-block__cards .heart-container .heart-container__heart {
+    position: relative;
+    width: 22px;
+    height: 21px;
+    border-radius: 0;
+    opacity: 1; }
+  .third-block__cards .heart-container .heart-container__heart--filled {
+    position: absolute;
+    width: 22px;
+    height: 21px;
+    left: 0%;
+    border-radius: 0;
+    opacity: 0; }
 
-.third-block__cards .heart-container.two {
-  cursor: pointer;
-  position: relative;
-  width: 22px;
-  height: 21px;
-  left: 85%;
-  bottom: 40px;
-  border-radius: 0; }
-
-.third-block__cards .heart-container.three {
-  cursor: pointer;
-  position: relative;
-  width: 22px;
-  height: 21px;
-  left: 85%;
-  bottom: 40px;
-  border-radius: 0; }
-
-.third-block__cards .heart-container.four {
-  cursor: pointer;
-  position: relative;
-  width: 22px;
-  height: 21px;
-  left: 85%;
-  bottom: 40px;
-  border-radius: 0; }
-
-.heart-container .one.filled-heart {
-  position: absolute;
-  right: 20px;
-  bottom: 43px;
-  display: none;
-  z-index: 3; }
-
-.heart-container .one.empty-heart:hover + .filled-heart {
-  display: inline; }
-
-.heart-container .two.filled-heart {
-  position: absolute;
-  right: 20px;
-  bottom: 43px;
-  display: none;
-  z-index: 2; }
-
-.heart-container .two.empty-heart:hover + .filled-heart {
-  display: inline; }
-
-.heart-container .three.filled-heart {
-  position: absolute;
-  right: 20px;
-  bottom: 43px;
-  display: none;
-  z-index: 2; }
-
-.heart-container .three.empty-heart:hover + .filled-heart {
-  display: inline; }
-
-.heart-container .four.filled-heart {
-  position: absolute;
-  right: 20px;
-  bottom: 43px;
-  display: none;
-  z-index: 2; }
-
-.heart-container .four.empty-heart:hover + .filled-heart {
-  display: inline; }
+.heart-container:hover > .heart-container__heart--filled {
+  transition: opacity 0.5s;
+  opacity: 1; }
 
 .heart-container.page {
   position: relative;
@@ -314,7 +264,7 @@ a {
       width: 12px;
       height: 13px; }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer-block {
     display: flex;
     flex-direction: row-reverse;
@@ -326,14 +276,9 @@ a {
     .footer-block .footer-block__logo {
       margin-left: 3em; }
     .footer-block .footer-block__list ul {
-      display: flex;
       gap: 4em;
-      flex-direction: row; }
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
       .footer-block .footer-block__list ul li:nth-child(3) {
         margin-left: 1px; } }
-
-@media (min-width: 1024px) {
-  .footer-block .footer-block__list ul {
-    gap: 4em; }
-    .footer-block .footer-block__list ul li:nth-child(3) {
-      margin-left: 1px; } }

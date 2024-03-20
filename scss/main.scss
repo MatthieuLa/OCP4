@@ -26,6 +26,7 @@ input {
   background-color: $bg--third--color;
   color: #000;
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
 input::placeholder {
@@ -203,6 +204,7 @@ input::placeholder {
       }
       p {
         font-weight: 300;
+        margin-bottom: 1em;
       }
     }
   }
