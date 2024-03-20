@@ -52,16 +52,35 @@ main {
   font-size: 28px;
   margin-bottom: 1.3em;
   margin-top: 0.7em;
+  margin-left: 0.15em;
 }
 
-.heart-container--heart {
+.heart-container {
+  cursor: pointer;
   position: absolute;
   width: 22px;
-  left: 83%;
-  bottom: 94.8%;
+  height: 21px;
+  left: 85%;
+  top: 3.4%;
   border-radius: 0;
-}
 
+  .heart-container__heart {
+    position: relative;
+    width: 22px;
+    height: 21px;
+    border-radius: 0;
+    opacity: 1;
+  }
+
+  .heart-container__heart--filled {
+    position: absolute;
+    width: 22px;
+    height: 21px;
+    left: 0%;
+    border-radius: 0;
+    opacity: 0;
+  }
+}
 .green-bar {
   background-color: $secondary--color;
   height: 4px;
