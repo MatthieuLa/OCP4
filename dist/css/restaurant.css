@@ -157,7 +157,9 @@ table {
     justify-content: center;
     top: 200px;
     width: 16em;
-    margin-right: 5em; } }
+    margin-right: 5em; }
+  .btn--purple.restaurant {
+    margin: 2em 10em; } }
 
 .second-block__elipse {
   display: flex;
@@ -236,7 +238,8 @@ a {
   padding: 2em;
   font-size: 0.9em;
   margin-bottom: 0;
-  line-height: 1.7em; }
+  line-height: 1.7em;
+  font-family: "Roboto", sans-serif; }
   .footer-block a {
     color: #fff;
     text-decoration: none; }
@@ -296,6 +299,8 @@ main {
   object-fit: cover;
   z-index: 0;
   position: relative; }
+  .image-block img {
+    max-height: 383px; }
 
 .main-block {
   background-color: #eaeaea;
@@ -345,84 +350,128 @@ main {
     border-radius: 0;
     opacity: 0; }
 
-.green-bar {
+.second-block__container section .green-bar {
   background-color: #99e2d0;
   height: 4px;
   width: 40px;
   margin-top: 8px; }
 
-.starters-block,
-.dishes-block,
-.desserts-block {
+.second-block__container section .starters-block,
+.second-block__container section .dishes-block,
+.second-block__container section .desserts-block {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 1em auto;
   width: 100%;
   gap: 1em; }
-
-.menu-block__button {
-  display: flex;
-  flex-direction: column;
-  background-color: #f6f6f6;
-  color: #000;
-  border: none;
-  padding: 0.5em 1em;
-  border-radius: 15px;
-  font-size: 1em;
-  cursor: pointer;
-  box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.05);
-  position: relative;
-  overflow: hidden; }
-  .menu-block__button h4 {
-    margin-top: 0.5em;
-    width: 76%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap; }
-  .menu-block__button h4,
-  .menu-block__button p {
-    margin-bottom: 1em; }
-  .menu-block__button .menu-block__button--txt {
+  .second-block__container section .starters-block article .menu-block__button,
+  .second-block__container section .dishes-block article .menu-block__button,
+  .second-block__container section .desserts-block article .menu-block__button {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    line-height: 1;
-    margin-top: 0;
-    font-size: 0.9em;
-    font-weight: 300; }
-    .menu-block__button .menu-block__button--txt .description span {
-      display: block;
-      width: 100%;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    color: #000;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 15px;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden; }
+    .second-block__container section .starters-block article .menu-block__button h4,
+    .second-block__container section .dishes-block article .menu-block__button h4,
+    .second-block__container section .desserts-block article .menu-block__button h4 {
+      margin-top: 0.5em;
+      width: 76%;
       text-overflow: ellipsis;
-      white-space: nowrap;
       overflow: hidden;
-      transition: width 0.3s ease-out; }
-    .menu-block__button .menu-block__button--txt .price {
-      font-weight: bold;
-      display: inline; }
-  .menu-block__button .background {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #99e2d0;
-    height: 100%;
-    width: 16%;
-    position: absolute;
-    right: -1em;
-    bottom: 0;
-    border-radius: 0 15px 15px 0;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-out; }
-    .menu-block__button .background .mark {
-      color: #fff;
-      font-size: 1.2em; }
-  .menu-block__button:hover h4 {
-    width: 13.3em; }
-  .menu-block__button:hover .background {
-    transform: translateX(0);
-    margin-right: 1em; }
-  .menu-block__button:hover .description span {
-    width: 14em; }
-  .menu-block__button:hover .price {
-    transform: translateX(-4em); }
+      white-space: nowrap; }
+    .second-block__container section .starters-block article .menu-block__button h4,
+    .second-block__container section .starters-block article .menu-block__button p,
+    .second-block__container section .dishes-block article .menu-block__button h4,
+    .second-block__container section .dishes-block article .menu-block__button p,
+    .second-block__container section .desserts-block article .menu-block__button h4,
+    .second-block__container section .desserts-block article .menu-block__button p {
+      margin-bottom: 1em; }
+    .second-block__container section .starters-block article .menu-block__button .menu-block__button--txt,
+    .second-block__container section .dishes-block article .menu-block__button .menu-block__button--txt,
+    .second-block__container section .desserts-block article .menu-block__button .menu-block__button--txt {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      line-height: 1;
+      margin-top: 0;
+      font-size: 0.9em;
+      font-weight: 300; }
+      .second-block__container section .starters-block article .menu-block__button .menu-block__button--txt .description span,
+      .second-block__container section .dishes-block article .menu-block__button .menu-block__button--txt .description span,
+      .second-block__container section .desserts-block article .menu-block__button .menu-block__button--txt .description span {
+        display: block;
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        transition: width 0.3s ease-out; }
+      .second-block__container section .starters-block article .menu-block__button .menu-block__button--txt .price,
+      .second-block__container section .dishes-block article .menu-block__button .menu-block__button--txt .price,
+      .second-block__container section .desserts-block article .menu-block__button .menu-block__button--txt .price {
+        font-weight: bold;
+        display: inline;
+        position: relative; }
+    .second-block__container section .starters-block article .menu-block__button .background,
+    .second-block__container section .dishes-block article .menu-block__button .background,
+    .second-block__container section .desserts-block article .menu-block__button .background {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #99e2d0;
+      height: 100%;
+      width: 60px;
+      position: absolute;
+      right: -1em;
+      bottom: 0;
+      border-radius: 0 15px 15px 0;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-out; }
+      .second-block__container section .starters-block article .menu-block__button .background .mark,
+      .second-block__container section .dishes-block article .menu-block__button .background .mark,
+      .second-block__container section .desserts-block article .menu-block__button .background .mark {
+        color: #fff;
+        font-size: 1.2em; }
+    .second-block__container section .starters-block article .menu-block__button:hover h4,
+    .second-block__container section .dishes-block article .menu-block__button:hover h4,
+    .second-block__container section .desserts-block article .menu-block__button:hover h4 {
+      width: 13.3em; }
+    .second-block__container section .starters-block article .menu-block__button:hover .background,
+    .second-block__container section .dishes-block article .menu-block__button:hover .background,
+    .second-block__container section .desserts-block article .menu-block__button:hover .background {
+      transform: translateX(0);
+      margin-right: 1em; }
+    .second-block__container section .starters-block article .menu-block__button:hover .description span,
+    .second-block__container section .dishes-block article .menu-block__button:hover .description span,
+    .second-block__container section .desserts-block article .menu-block__button:hover .description span {
+      width: 14em; }
+    .second-block__container section .starters-block article .menu-block__button:hover .price,
+    .second-block__container section .dishes-block article .menu-block__button:hover .price,
+    .second-block__container section .desserts-block article .menu-block__button:hover .price {
+      transform: translateX(-4em); }
+
+@media screen and (min-width: 1024px) {
+  .main-block {
+    margin: auto 9em; }
+    .main-block .first-block__wrapper {
+      margin: auto 12em; }
+      .main-block .first-block__wrapper .heart-container {
+        left: 90%; }
+    .main-block .second-block__container {
+      margin: auto 8em; }
+      .main-block .second-block__container section .starters-block article .menu-block__button:hover h4,
+      .main-block .second-block__container section .dishes-block article .menu-block__button:hover h4,
+      .main-block .second-block__container section .desserts-block article .menu-block__button:hover h4 {
+        width: 20em; }
+      .main-block .second-block__container section .starters-block article .menu-block__button:hover .description span,
+      .main-block .second-block__container section .dishes-block article .menu-block__button:hover .description span,
+      .main-block .second-block__container section .desserts-block article .menu-block__button:hover .description span {
+        width: 20em; } }

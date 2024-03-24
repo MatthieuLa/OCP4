@@ -21,6 +21,10 @@ main {
   object-fit: cover;
   z-index: 0;
   position: relative;
+
+  img {
+    max-height: 383px;
+  }
 }
 
 // Main
@@ -86,115 +90,161 @@ main {
   }
 }
 
-.green-bar {
-  background-color: $secondary--color;
-  height: 4px;
-  width: 40px;
-  margin-top: 8px;
-}
-
 // Bloc plats
 
-.starters-block,
-.dishes-block,
-.desserts-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 1em auto;
-  width: 100%;
-  gap: 1em;
-}
+.second-block__container {
+  section {
+    .green-bar {
+      background-color: $secondary--color;
+      height: 4px;
+      width: 40px;
+      margin-top: 8px;
+    }
 
-.menu-block__button {
-  display: flex;
-  flex-direction: column;
-  background-color: $bg--primary--color;
-  color: #000;
-  border: none;
-  padding: 0.5em 1em;
-  border-radius: 15px;
-  font-size: 1em;
-  cursor: pointer;
-  box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.05);
-  position: relative;
-  overflow: hidden;
-  h4 {
-    margin-top: 0.5em;
-    width: 76%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
+    .starters-block,
+    .dishes-block,
+    .desserts-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 1em auto;
+      width: 100%;
+      gap: 1em;
 
-  h4,
-  p {
-    margin-bottom: 1em;
-  }
+      article {
+        .menu-block__button {
+          display: flex;
+          flex-direction: column;
+          background-color: $bg--primary--color;
+          color: #000;
+          border: none;
+          padding: 0.5em 1em;
+          border-radius: 15px;
+          font-size: 1em;
+          cursor: pointer;
+          box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.05);
+          position: relative;
+          overflow: hidden;
+          h4 {
+            margin-top: 0.5em;
+            width: 76%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
 
-  .menu-block__button--txt {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    line-height: 1;
-    margin-top: 0;
-    font-size: 0.9em;
-    font-weight: 300;
+          h4,
+          p {
+            margin-bottom: 1em;
+          }
 
-    .description {
-      span {
-        display: block;
-        width: 100%;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-        transition: width 0.3s ease-out;
+          .menu-block__button--txt {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            line-height: 1;
+            margin-top: 0;
+            font-size: 0.9em;
+            font-weight: 300;
+
+            .description {
+              span {
+                display: block;
+                width: 100%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                transition: width 0.3s ease-out;
+              }
+            }
+            .price {
+              font-weight: bold;
+              display: inline;
+              position: relative;
+            }
+          }
+
+          // Effet au survol des plats
+
+          .background {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $secondary--color;
+            height: 100%;
+            width: 60px;
+            position: absolute;
+            right: -1em;
+            bottom: 0;
+            border-radius: 0 15px 15px 0;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-out;
+
+            .mark {
+              color: #fff;
+              font-size: 1.2em;
+            }
+          }
+
+          // :hover
+
+          &:hover {
+            h4 {
+              width: 13.3em;
+            }
+
+            .background {
+              transform: translateX(0);
+              margin-right: 1em;
+            }
+            .description span {
+              width: 14em; // Réduis la largeur lors du survol, ne s'applique seulement aux éléments contenu dans la div .description
+            }
+            .price {
+              transform: translateX(
+                -4em
+              ); //Déplace le prix sur la gauche de la carte
+            }
+          }
+        }
       }
     }
-    .price {
-      font-weight: bold;
-      display: inline;
-    }
   }
+}
 
-  // Effet au survol des plats
+@media screen and (min-width: 1024px) {
+  .main-block {
+    margin: auto 9em;
 
-  .background {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $secondary--color;
-    height: 100%;
-    width: 16%;
-    position: absolute;
-    right: -1em;
-    bottom: 0;
-    border-radius: 0 15px 15px 0;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-out;
+    .first-block__wrapper {
+      margin: auto 12em;
 
-    .mark {
-      color: #fff;
-      font-size: 1.2em;
-    }
-  }
-
-  // :hover
-
-  &:hover {
-    h4 {
-      width: 13.3em;
+      .heart-container {
+        left: 90%;
+      }
     }
 
-    .background {
-      transform: translateX(0);
-      margin-right: 1em;
-    }
-    .description span {
-      width: 14em; // Réduis la largeur lors du survol, ne s'applique seulement aux éléments contenu dans la div .description
-    }
-    .price {
-      transform: translateX(-4em); //Déplace le prix sur la gauche de la carte
+    .second-block__container {
+      margin: auto 8em;
+
+      section {
+        .starters-block,
+        .dishes-block,
+        .desserts-block {
+          article {
+            .menu-block__button {
+              &:hover {
+                h4 {
+                  width: 20em;
+                }
+                .description span {
+                  width: 20em;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

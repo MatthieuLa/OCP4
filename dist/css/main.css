@@ -157,7 +157,9 @@ table {
     justify-content: center;
     top: 200px;
     width: 16em;
-    margin-right: 5em; } }
+    margin-right: 5em; }
+  .btn--purple.restaurant {
+    margin: 2em 10em; } }
 
 .second-block__elipse {
   display: flex;
@@ -236,7 +238,8 @@ a {
   padding: 2em;
   font-size: 0.9em;
   margin-bottom: 0;
-  line-height: 1.7em; }
+  line-height: 1.7em;
+  font-family: "Roboto", sans-serif; }
   .footer-block a {
     color: #fff;
     text-decoration: none; }
