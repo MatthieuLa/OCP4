@@ -136,10 +136,16 @@ table {
   width: calc(100% - 8em);
   font-size: 14px;
   cursor: pointer;
-  transition-delay: 0.3s; }
+  opacity: 1;
+  transition: box-shadow 0.3s ease-out;
+  transition: box-shadow 0.5s ease-out; }
   .btn--purple:hover {
     background: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 8%, rgba(255, 121, 218, 0.9) 100%);
-    box-shadow: 0 6px 10px 1px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 6px 10px 1px rgba(0, 0, 0, 0.25); }
+
+.btn--purple.restaurant {
+  margin: 2em 4em;
+  width: 200px; }
 
 @media (min-width: 768px) {
   .btn--purple {
@@ -148,7 +154,9 @@ table {
     justify-content: center;
     top: 200px;
     width: 16em;
-    margin-right: 5em; } }
+    margin-right: 5em; }
+  .btn--purple.restaurant {
+    margin: 2em auto; } }
 
 @media (min-width: 768px) and (min-width: 1024px) {
   .btn--purple {
@@ -157,9 +165,7 @@ table {
     justify-content: center;
     top: 200px;
     width: 16em;
-    margin-right: 5em; }
-  .btn--purple.restaurant {
-    margin: 2em 10em; } }
+    margin-right: 5em; } }
 
 .second-block__elipse {
   display: flex;
@@ -192,38 +198,20 @@ table {
     width: 22px;
     height: 21px;
     border-radius: 0;
-    opacity: 1; }
+    opacity: 1;
+    transition: opacity 0.5s; }
   .third-block__cards .heart-container .heart-container__heart--filled {
     position: absolute;
     width: 22px;
     height: 21px;
     left: 0%;
     border-radius: 0;
-    opacity: 0; }
+    opacity: 0;
+    transition: opacity 0.5s; }
 
 .heart-container:hover > .heart-container__heart--filled {
   transition: opacity 0.5s;
   opacity: 1; }
-
-.heart-container.page {
-  position: relative;
-  width: 22px;
-  height: 21px;
-  left: 87%;
-  bottom: 60px;
-  z-index: 2; }
-
-.heart-container.filled-heart {
-  position: relative;
-  width: 22px;
-  height: 21px;
-  left: 80.5%;
-  bottom: 60px;
-  display: none;
-  z-index: 3; }
-
-.page:hover + .filled-heart {
-  display: inline; }
 
 a {
   text-decoration: none;
@@ -321,34 +309,40 @@ main {
   .main-block h2:nth-of-type(2)::after {
     width: 85%; }
 
-.header-restaurant {
-  font-family: Shrikhand, sans-serif;
-  font-size: 28px;
-  margin-bottom: 1.3em;
-  margin-top: 0.7em;
-  margin-left: 0.15em; }
-
-.heart-container {
-  cursor: pointer;
-  position: absolute;
-  width: 22px;
-  height: 21px;
-  left: 85%;
-  top: 3.4%;
-  border-radius: 0; }
-  .heart-container .heart-container__heart {
-    position: relative;
-    width: 22px;
-    height: 21px;
-    border-radius: 0;
-    opacity: 1; }
-  .heart-container .heart-container__heart--filled {
+.first-block__wrapper {
+  display: flex;
+  position: relative;
+  margin: 1em auto;
+  width: 77%; }
+  .first-block__wrapper .header-restaurant {
+    font-family: Shrikhand, sans-serif;
+    font-size: 28px; }
+  .first-block__wrapper .heart-container {
+    cursor: pointer;
     position: absolute;
     width: 22px;
     height: 21px;
-    left: 0%;
+    left: 85%;
+    top: 3.4%;
     border-radius: 0;
-    opacity: 0; }
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%); }
+    .first-block__wrapper .heart-container .heart-container__heart {
+      position: relative;
+      width: 22px;
+      height: 21px;
+      border-radius: 0;
+      opacity: 1;
+      transition: opacity 0.5s; }
+    .first-block__wrapper .heart-container .heart-container__heart--filled {
+      position: absolute;
+      width: 22px;
+      height: 21px;
+      left: 0%;
+      border-radius: 0;
+      opacity: 0;
+      transition: opacity 0.5s; }
 
 .second-block__container section .green-bar {
   background-color: #99e2d0;
@@ -384,10 +378,7 @@ main {
     .second-block__container section .dishes-block article .menu-block__button h4,
     .second-block__container section .desserts-block article .menu-block__button h4 {
       margin-top: 0.5em;
-      width: 76%;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap; }
+      width: 76%; }
     .second-block__container section .starters-block article .menu-block__button h4,
     .second-block__container section .starters-block article .menu-block__button p,
     .second-block__container section .dishes-block article .menu-block__button h4,
@@ -410,16 +401,14 @@ main {
       .second-block__container section .desserts-block article .menu-block__button .menu-block__button--txt .description span {
         display: block;
         width: 100%;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
         transition: width 0.3s ease-out; }
       .second-block__container section .starters-block article .menu-block__button .menu-block__button--txt .price,
       .second-block__container section .dishes-block article .menu-block__button .menu-block__button--txt .price,
       .second-block__container section .desserts-block article .menu-block__button .menu-block__button--txt .price {
         font-weight: bold;
         display: inline;
-        position: relative; }
+        position: relative;
+        transition: all 0.3s ease-out; }
     .second-block__container section .starters-block article .menu-block__button .background,
     .second-block__container section .dishes-block article .menu-block__button .background,
     .second-block__container section .desserts-block article .menu-block__button .background {
@@ -443,7 +432,10 @@ main {
     .second-block__container section .starters-block article .menu-block__button:hover h4,
     .second-block__container section .dishes-block article .menu-block__button:hover h4,
     .second-block__container section .desserts-block article .menu-block__button:hover h4 {
-      width: 13.3em; }
+      width: 13.3em;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap; }
     .second-block__container section .starters-block article .menu-block__button:hover .background,
     .second-block__container section .dishes-block article .menu-block__button:hover .background,
     .second-block__container section .desserts-block article .menu-block__button:hover .background {
@@ -452,48 +444,40 @@ main {
     .second-block__container section .starters-block article .menu-block__button:hover .description span,
     .second-block__container section .dishes-block article .menu-block__button:hover .description span,
     .second-block__container section .desserts-block article .menu-block__button:hover .description span {
-      width: 14em; }
+      width: 14em;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden; }
     .second-block__container section .starters-block article .menu-block__button:hover .price,
     .second-block__container section .dishes-block article .menu-block__button:hover .price,
     .second-block__container section .desserts-block article .menu-block__button:hover .price {
-      transform: translateX(-4em); }
+      transform: translateX(-4em);
+      transition: all 0.3s ease-out; }
 
 @media screen and (min-width: 768px) {
   .main-block {
     margin: auto 3em; }
-    .main-block .first-block__wrapper {
-      margin: auto 10em; }
-      .main-block .first-block__wrapper .header-restaurant {
-        margin-left: 40px; }
-      .main-block .first-block__wrapper .heart-container {
-        left: 510px; }
-    .main-block .second-block__container {
-      margin: auto 3em; }
-      .main-block .second-block__container section .starters-block article .menu-block__button:hover h4,
-      .main-block .second-block__container section .dishes-block article .menu-block__button:hover h4,
-      .main-block .second-block__container section .desserts-block article .menu-block__button:hover h4 {
-        width: 20em; }
-      .main-block .second-block__container section .starters-block article .menu-block__button:hover .description span,
-      .main-block .second-block__container section .dishes-block article .menu-block__button:hover .description span,
-      .main-block .second-block__container section .desserts-block article .menu-block__button:hover .description span {
-        width: 20em; } }
+  .second-block__container {
+    margin: auto 3em; }
+    .second-block__container section .starters-block article .menu-block__button:hover h4,
+    .second-block__container section .dishes-block article .menu-block__button:hover h4,
+    .second-block__container section .desserts-block article .menu-block__button:hover h4 {
+      width: 20em; }
+    .second-block__container section .starters-block article .menu-block__button:hover .description span,
+    .second-block__container section .dishes-block article .menu-block__button:hover .description span,
+    .second-block__container section .desserts-block article .menu-block__button:hover .description span {
+      width: 20em; } }
 
 @media screen and (min-width: 1024px) {
   .main-block {
     margin: auto 12em; }
-    .main-block .first-block__wrapper {
-      margin: auto 8em; }
-      .main-block .first-block__wrapper .header-restaurant {
-        margin-left: 40px; }
-      .main-block .first-block__wrapper .heart-container {
-        left: 470px; }
-    .main-block .second-block__container {
-      margin: auto 8em; }
-      .main-block .second-block__container section .starters-block article .menu-block__button:hover h4,
-      .main-block .second-block__container section .dishes-block article .menu-block__button:hover h4,
-      .main-block .second-block__container section .desserts-block article .menu-block__button:hover h4 {
-        width: 20em; }
-      .main-block .second-block__container section .starters-block article .menu-block__button:hover .description span,
-      .main-block .second-block__container section .dishes-block article .menu-block__button:hover .description span,
-      .main-block .second-block__container section .desserts-block article .menu-block__button:hover .description span {
-        width: 20em; } }
+  .second-block__container {
+    margin: auto 8em; }
+    .second-block__container section .starters-block article .menu-block__button:hover h4,
+    .second-block__container section .dishes-block article .menu-block__button:hover h4,
+    .second-block__container section .desserts-block article .menu-block__button:hover h4 {
+      width: 20em; }
+    .second-block__container section .starters-block article .menu-block__button:hover .description span,
+    .second-block__container section .dishes-block article .menu-block__button:hover .description span,
+    .second-block__container section .desserts-block article .menu-block__button:hover .description span {
+      width: 20em; } }

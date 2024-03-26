@@ -54,42 +54,49 @@ main {
     width: 85%; // Ajuste la longueur de la barre sous le second h2 "PLATS"
   }
 }
+.first-block__wrapper {
+  display: flex;
+  position: relative;
+  margin: 1em auto;
+  width: 77%;
 
-.header-restaurant {
-  font-family: Shrikhand, sans-serif;
-  font-size: 28px;
-  margin-bottom: 1.3em;
-  margin-top: 0.7em;
-  margin-left: 0.15em;
-}
-
-.heart-container {
-  cursor: pointer;
-  position: absolute;
-  width: 22px;
-  height: 21px;
-  left: 85%;
-  top: 3.4%;
-  border-radius: 0;
-
-  .heart-container__heart {
-    position: relative;
-    width: 22px;
-    height: 21px;
-    border-radius: 0;
-    opacity: 1;
+  .header-restaurant {
+    font-family: Shrikhand, sans-serif;
+    font-size: 28px;
   }
 
-  .heart-container__heart--filled {
+  .heart-container {
+    cursor: pointer;
     position: absolute;
     width: 22px;
     height: 21px;
-    left: 0%;
+    left: 85%;
+    top: 3.4%;
     border-radius: 0;
-    opacity: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .heart-container__heart {
+      position: relative;
+      width: 22px;
+      height: 21px;
+      border-radius: 0;
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
+
+    .heart-container__heart--filled {
+      position: absolute;
+      width: 22px;
+      height: 21px;
+      left: 0%;
+      border-radius: 0;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
   }
 }
-
 // Bloc plats
 
 .second-block__container {
@@ -128,9 +135,6 @@ main {
           h4 {
             margin-top: 0.5em;
             width: 76%;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
           }
 
           h4,
@@ -151,16 +155,14 @@ main {
               span {
                 display: block;
                 width: 100%;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
-                transition: width 0.3s ease-out;
+                transition: width 0.3s ease-out; // Permet de garder la fluidité "in-and-out" de l'élement au survol
               }
             }
             .price {
               font-weight: bold;
               display: inline;
               position: relative;
+              transition: all 0.3s ease-out; // Permet de garder la fluidité "in-and-out" de l'élement au survol
             }
           }
 
@@ -191,6 +193,9 @@ main {
           &:hover {
             h4 {
               width: 13.3em;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
             }
 
             .background {
@@ -199,11 +204,15 @@ main {
             }
             .description span {
               width: 14em; // Réduis la largeur lors du survol, ne s'applique seulement aux éléments contenu dans la div .description
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
             }
             .price {
               transform: translateX(
                 -4em
               ); //Déplace le prix sur la gauche de la carte
+              transition: all 0.3s ease-out;
             }
           }
         }
@@ -215,35 +224,23 @@ main {
 @media screen and (min-width: 768px) {
   .main-block {
     margin: auto 3em;
+  }
 
-    .first-block__wrapper {
-      margin: auto 10em;
+  .second-block__container {
+    margin: auto 3em;
 
-      .header-restaurant {
-        margin-left: 40px;
-      }
-
-      .heart-container {
-        left: 510px;
-      }
-    }
-
-    .second-block__container {
-      margin: auto 3em;
-
-      section {
-        .starters-block,
-        .dishes-block,
-        .desserts-block {
-          article {
-            .menu-block__button {
-              &:hover {
-                h4 {
-                  width: 20em;
-                }
-                .description span {
-                  width: 20em;
-                }
+    section {
+      .starters-block,
+      .dishes-block,
+      .desserts-block {
+        article {
+          .menu-block__button {
+            &:hover {
+              h4 {
+                width: 20em;
+              }
+              .description span {
+                width: 20em;
               }
             }
           }
@@ -256,35 +253,23 @@ main {
 @media screen and (min-width: 1024px) {
   .main-block {
     margin: auto 12em;
+  }
 
-    .first-block__wrapper {
-      margin: auto 8em;
+  .second-block__container {
+    margin: auto 8em;
 
-      .header-restaurant {
-        margin-left: 40px;
-      }
-
-      .heart-container {
-        left: 470px;
-      }
-    }
-
-    .second-block__container {
-      margin: auto 8em;
-
-      section {
-        .starters-block,
-        .dishes-block,
-        .desserts-block {
-          article {
-            .menu-block__button {
-              &:hover {
-                h4 {
-                  width: 20em;
-                }
-                .description span {
-                  width: 20em;
-                }
+    section {
+      .starters-block,
+      .dishes-block,
+      .desserts-block {
+        article {
+          .menu-block__button {
+            &:hover {
+              h4 {
+                width: 20em;
+              }
+              .description span {
+                width: 20em;
               }
             }
           }
