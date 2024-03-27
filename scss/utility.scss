@@ -173,7 +173,7 @@ $secondary--color: #99e2d0;
 // Bouton des pages restaurant
 
 .btn--purple.restaurant {
-  margin: 2em 4em;
+  margin: 2em 5em;
   width: 200px;
 }
 
@@ -261,8 +261,8 @@ $secondary--color: #99e2d0;
 // Effets survols coeurs de l'index
 
 .heart-container:hover > .heart-container__heart--filled {
-  transition: opacity 0.5s;
-  opacity: 1;
+  transition: opacity 0.5s !important; // !important pour forcer la transition des pages restaurants sans faire plus de spécificité.
+  opacity: 1 !important;
 }
 
 // Anchor style

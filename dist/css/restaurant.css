@@ -144,7 +144,7 @@ table {
     box-shadow: 0 6px 10px 1px rgba(0, 0, 0, 0.25); }
 
 .btn--purple.restaurant {
-  margin: 2em 4em;
+  margin: 2em 5em;
   width: 200px; }
 
 @media (min-width: 768px) {
@@ -210,8 +210,8 @@ table {
     transition: opacity 0.5s; }
 
 .heart-container:hover > .heart-container__heart--filled {
-  transition: opacity 0.5s;
-  opacity: 1; }
+  transition: opacity 0.5s !important;
+  opacity: 1 !important; }
 
 a {
   text-decoration: none;
@@ -313,7 +313,7 @@ main {
   display: flex;
   position: relative;
   margin: 1em auto;
-  width: 77%; }
+  width: 21em; }
   .first-block__wrapper .header-restaurant {
     font-family: Shrikhand, sans-serif;
     font-size: 28px; }
@@ -400,7 +400,6 @@ main {
       .second-block__container section .dishes-block article .menu-block__button .menu-block__button--txt .description span,
       .second-block__container section .desserts-block article .menu-block__button .menu-block__button--txt .description span {
         display: block;
-        width: 100%;
         transition: width 0.3s ease-out; }
       .second-block__container section .starters-block article .menu-block__button .menu-block__button--txt .price,
       .second-block__container section .dishes-block article .menu-block__button .menu-block__button--txt .price,
@@ -435,7 +434,8 @@ main {
       width: 13.3em;
       text-overflow: ellipsis;
       overflow: hidden;
-      white-space: nowrap; }
+      white-space: nowrap;
+      width: calc(100% - 60px); }
     .second-block__container section .starters-block article .menu-block__button:hover .background,
     .second-block__container section .dishes-block article .menu-block__button:hover .background,
     .second-block__container section .desserts-block article .menu-block__button:hover .background {
@@ -447,37 +447,78 @@ main {
       width: 14em;
       text-overflow: ellipsis;
       white-space: nowrap;
-      overflow: hidden; }
+      overflow: hidden;
+      width: calc(100% - 60px); }
     .second-block__container section .starters-block article .menu-block__button:hover .price,
     .second-block__container section .dishes-block article .menu-block__button:hover .price,
     .second-block__container section .desserts-block article .menu-block__button:hover .price {
       transform: translateX(-4em);
       transition: all 0.3s ease-out; }
 
+@keyframes translateX {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes translateX {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+.starters-block .menu-block__button:nth-of-type(1),
+.dishes-block .menu-block__button:nth-of-type(1),
+.desserts-block .menu-block__button:nth-of-type(1) {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: translateX 1s ease-out 0.2s forwards; }
+
+.dishes-block .menu-block__button:nth-of-type(1) {
+  animation-delay: 0.8s; }
+
+.desserts-block .menu-block__button:nth-of-type(1) {
+  animation-delay: 1.4s; }
+
+.starters-block .menu-block__button:nth-of-type(2),
+.dishes-block .menu-block__button:nth-of-type(2),
+.desserts-block .menu-block__button:nth-of-type(2) {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: translateX 1s ease-out 0.4s forwards; }
+
+.dishes-block .menu-block__button:nth-of-type(2) {
+  animation-delay: 1s; }
+
+.desserts-block .menu-block__button:nth-of-type(2) {
+  animation-delay: 1.6s; }
+
+.starters-block .menu-block__button:nth-of-type(3),
+.dishes-block .menu-block__button:nth-of-type(3),
+.desserts-block .menu-block__button:nth-of-type(3) {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: translateX 1s ease-out 0.6s forwards; }
+
+.dishes-block .menu-block__button:nth-of-type(3) {
+  animation-delay: 1.2s; }
+
+.desserts-block .menu-block__button:nth-of-type(3) {
+  animation-delay: 1.8s; }
+
 @media screen and (min-width: 768px) {
   .main-block {
     margin: auto 3em; }
   .second-block__container {
-    margin: auto 3em; }
-    .second-block__container section .starters-block article .menu-block__button:hover h4,
-    .second-block__container section .dishes-block article .menu-block__button:hover h4,
-    .second-block__container section .desserts-block article .menu-block__button:hover h4 {
-      width: 20em; }
-    .second-block__container section .starters-block article .menu-block__button:hover .description span,
-    .second-block__container section .dishes-block article .menu-block__button:hover .description span,
-    .second-block__container section .desserts-block article .menu-block__button:hover .description span {
-      width: 20em; } }
+    margin: auto 3em; } }
 
 @media screen and (min-width: 1024px) {
   .main-block {
     margin: auto 12em; }
   .second-block__container {
-    margin: auto 8em; }
-    .second-block__container section .starters-block article .menu-block__button:hover h4,
-    .second-block__container section .dishes-block article .menu-block__button:hover h4,
-    .second-block__container section .desserts-block article .menu-block__button:hover h4 {
-      width: 20em; }
-    .second-block__container section .starters-block article .menu-block__button:hover .description span,
-    .second-block__container section .dishes-block article .menu-block__button:hover .description span,
-    .second-block__container section .desserts-block article .menu-block__button:hover .description span {
-      width: 20em; } }
+    margin: auto 9em;
+    width: calc(); } }

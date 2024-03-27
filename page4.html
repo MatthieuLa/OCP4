@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ohmyfood</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Possible conflit ? -->
+    <link rel="stylesheet" href="./dist/css/main.css" />
+    <!--  -->
+    <link rel="stylesheet" href="./dist/css/restaurant.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header>
+      <div class="header-logo">
+        <a href="./index.html"><i class="fa-solid fa-lg fa-arrow-left"></i></a>
+        <h1 class="header__logo--txt">ohmyfood</h1>
+      </div>
+    </header>
+    <main>
+      <!-- Image -->
+
+      <div class="image-block">
+        <img
+          src="./assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+          alt="Des plats sur une table de restaurant"
+        />
+      </div>
+
+      <!-- First block restaurant -->
+
+      <section class="main-block">
+        <div class="first-block__wrapper">
+          <h2 class="header-restaurant">Le délice des sens</h2>
+          <div class="heart-container">
+            <img
+              src="./assets/heart.svg"
+              alt=""
+              class="heart-container__heart"
+            />
+            <img
+              src="./assets/heart-filled.svg"
+              alt=""
+              class="heart-container__heart--filled"
+            />
+          </div>
+        </div>
+        <div class="second-block__container">
+          <!-- Starters -->
+          <section>
+            <h3>Entrées</h3>
+            <div class="green-bar"></div>
+            <div class="starters-block">
+              <article>
+                <div class="menu-block__button">
+                  <h4>Tartare de thon</h4>
+                  <div class="menu-block__button--txt">
+                    <span>Assaisonné au yuzu</span
+                    ><span class="price">25€</span>
+                  </div>
+                  <div class="background">
+                    <i class="fa-solid fa-circle-check mark"></i>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <div class="menu-block__button">
+                  <h4>Bouchée de homard croustillant</h4>
+                  <div class="menu-block__button--txt">
+                    <span>Et sa farandole de petits légumes</span>
+                    <span class="price">35€</span>
+                  </div>
+                  <div class="background">
+                    <i class="fa-solid fa-circle-check mark"></i>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <div class="menu-block__button">
+                  <h4>Velouté de cèpes</h4>
+                  <div class="menu-block__button--txt">
+                    <div class="description">
+                      <span>Aux truffes</span>
+                    </div>
+                    <span class="price">20€</span>
+                  </div>
+                  <div class="background">
+                    <i class="fa-solid fa-circle-check mark"></i>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+          <!-- Dishes -->
+          <section>
+            <h3>Plats</h3>
+            <div class="green-bar"></div>
+            <div class="dishes-block">
+              <article>
+                <div class="menu-block__button">
+                  <h4>Poulet rôti aux herbes de Provence</h4>
+                  <div class="menu-block__button--txt">
+                    <div class="description">
+                      <span>Et sa crème de truffe</span>
+                    </div>
+                    <span class="price">40€</span>
+                  </div>
+                  <div class="background">
+                    <i class="fa-solid fa-circle-check mark"></i>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <div class="menu-block__button">
+                  <h4>Langouste rôtie</h4>
+                  <div class="menu-block__button--txt">
+                    <div class="description">
+                      <span> Et ses légumes de saison</span>
+                    </div>
+                    <span class="price">35€</span>
+                  </div>
+                  <div class="background">
+                    <i class="fa-solid fa-circle-check mark"></i>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <div class="menu-block__button">
+                  <h4>Côte de bœuf Angus</h4>
+                  <div class="menu-block__button--txt">
+                    <span>Et sa purée de panais</span
+                    ><span class="price">44€</span>
+                  </div>
+                  <div class="background">
+                    <i class="fa-solid fa-circle-check mark"></i>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- Desserts -->
+          <section>
+            <h3>desserts</h3>
+            <div class="green-bar"></div>
+            <div class="desserts-block">
+              <article>
+                <div class="menu-block__button">
+                  <h4>Farandole de desserts</h4>
+                  <div class="menu-block__button--txt">
+                    <span>Du chef</span><span class="price">18€</span>
+                  </div>
+                  <div class="background">
+                    <i class="fa-solid fa-circle-check mark"></i>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <div class="menu-block__button">
+                  <h4>Crème brulée</h4>
+                  <div class="menu-block__button--txt">
+                    <div class="description">
+                      <span> Revisitée</span>
+                    </div>
+                    <span class="price">22€</span>
+                  </div>
+                  <div class="background">
+                    <i class="fa-solid fa-circle-check mark"></i>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <div class="menu-block__button">
+                  <h4>Tiramisu</h4>
+                  <div class="menu-block__button--txt">
+                    <div class="description">
+                      <span> À la noisette</span>
+                    </div>
+                    <span class="price">23€</span>
+                  </div>
+                  <div class="background">
+                    <i class="fa-solid fa-circle-check mark"></i>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+          <button class="btn--purple restaurant">Commander</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer-block">
+      <h3 class="footer-block__logo">ohmyfood</h3>
+      <div class="footer-block__list">
+        <ul>
+          <li>
+            <i class="fa-solid fa-utensils"></i
+            ><a href="#">Proposer un restaurant</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-handshake-angle"></i
+            ><a href="#">Devenir partenaire</a>
+          </li>
+          <li><a href="#">Mentions légales</a></li>
+          <li>
+            <a href="mailto:contact@ohmyfood.com">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

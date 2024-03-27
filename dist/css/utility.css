@@ -144,7 +144,7 @@ table {
     box-shadow: 0 6px 10px 1px rgba(0, 0, 0, 0.25); }
 
 .btn--purple.restaurant {
-  margin: 2em 4em;
+  margin: 2em 5em;
   width: 200px; }
 
 @media (min-width: 768px) {
@@ -210,8 +210,8 @@ table {
     transition: opacity 0.5s; }
 
 .heart-container:hover > .heart-container__heart--filled {
-  transition: opacity 0.5s;
-  opacity: 1; }
+  transition: opacity 0.5s !important;
+  opacity: 1 !important; }
 
 a {
   text-decoration: none;

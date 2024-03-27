@@ -58,7 +58,7 @@ main {
   display: flex;
   position: relative;
   margin: 1em auto;
-  width: 77%;
+  width: 21em;
 
   .header-restaurant {
     font-family: Shrikhand, sans-serif;
@@ -154,7 +154,6 @@ main {
             .description {
               span {
                 display: block;
-                width: 100%;
                 transition: width 0.3s ease-out; // Permet de garder la fluidité "in-and-out" de l'élement au survol
               }
             }
@@ -196,6 +195,7 @@ main {
               text-overflow: ellipsis;
               overflow: hidden;
               white-space: nowrap;
+              width: calc(100% - 60px);
             }
 
             .background {
@@ -207,6 +207,7 @@ main {
               text-overflow: ellipsis;
               white-space: nowrap;
               overflow: hidden;
+              width: calc(100% - 60px);
             }
             .price {
               transform: translateX(
@@ -221,6 +222,61 @@ main {
   }
 }
 
+// Anmations des boutons au chargement de la page
+
+// Keyframes de l'animation
+
+@keyframes translateX {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes translateX {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// Variables pour les délais d'apparition des boutons
+
+$dishes-delay: 0.6s;
+$desserts-delay: 1.2s;
+
+// Boucle for pour les 3 premiers boutons de chaque section
+
+@for $i from 1 through 3 {
+  .starters-block .menu-block__button:nth-of-type(#{$i}),
+  .dishes-block .menu-block__button:nth-of-type(#{$i}),
+  .desserts-block .menu-block__button:nth-of-type(#{$i}) {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: translateX 1s ease-out #{$i * 0.2}s forwards;
+  }
+
+  // Sur les deux sections suivantes, j'ajoute un délai supplémentaire pour que les boutons apparaissent un par un sur le dishes et le desserts
+
+  .dishes-block .menu-block__button:nth-of-type(#{$i}) {
+    animation-delay: #{$i * 0.2s + $dishes-delay};
+  }
+
+  .desserts-block .menu-block__button:nth-of-type(#{$i}) {
+    animation-delay: #{$i * 0.2s + $desserts-delay};
+  }
+}
+
+// Media queries
+
 @media screen and (min-width: 768px) {
   .main-block {
     margin: auto 3em;
@@ -228,25 +284,6 @@ main {
 
   .second-block__container {
     margin: auto 3em;
-
-    section {
-      .starters-block,
-      .dishes-block,
-      .desserts-block {
-        article {
-          .menu-block__button {
-            &:hover {
-              h4 {
-                width: 20em;
-              }
-              .description span {
-                width: 20em;
-              }
-            }
-          }
-        }
-      }
-    }
   }
 }
 
@@ -256,25 +293,7 @@ main {
   }
 
   .second-block__container {
-    margin: auto 8em;
-
-    section {
-      .starters-block,
-      .dishes-block,
-      .desserts-block {
-        article {
-          .menu-block__button {
-            &:hover {
-              h4 {
-                width: 20em;
-              }
-              .description span {
-                width: 20em;
-              }
-            }
-          }
-        }
-      }
-    }
+    margin: auto 9em;
+    width: calc();
   }
 }
